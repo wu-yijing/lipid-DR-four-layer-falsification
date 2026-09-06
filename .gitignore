@@ -1,0 +1,44 @@
+# ===== confidentiality red lines: never commit =====
+*.docx
+*.pdf
+*.pptx
+伦理*/
+手稿*/
+*_图片/
+
+# individual-level / raw data (aggregate-only repo)
+data/
+raw/
+*.csv
+*.tsv
+*.rds
+*.sav
+*.xpt
+nhanes_raw_fixed/
+
+# large intermediate outputs regenerated from scripts
+*_out/
+*_dev/
+*_ext/
+
+# manuscript docx-assembly scripts (confidential text pipeline — keep out of this code repo)
+apply_m1m6_revisions.py
+renumber_refs.py
+build_english_docx.py
+make_declarations_docx.py
+make_ethics*.py
+make_figures_docx.py
+md_to_docx_checklist.py
+make_waiver_application.py
+
+# debug / literature-search helpers (not part of the analysis pipeline)
+dbg*.R
+dbg*.py
+lit*.py
+lit_search/
+
+# environment
+__pycache__/
+*.Rproj.user/
+.venv/
+.ipynb_checkpoints/

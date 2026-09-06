@@ -1,0 +1,17 @@
+OUT <- "E:/workbuddy/2026-09-04-18-19-16/phase1_out"
+sink(file.path(OUT, "phase1_mvmr_diag.log"), split = TRUE)
+suppressMessages(library(TwoSampleMR))
+suppressMessages(library(MVMR))
+cat("==== MVMR package functions ====\n")
+print(ls("package:MVMR"))
+cat("\n==== TwoSampleMR mv_ functions ====\n")
+print(ls("package:TwoSampleMR")[grepl("^mv", ls("package:TwoSampleMR"))])
+cat("\n==== format_mvMR args ====\n")
+print(args(format_mvMR))
+cat("\n==== MVMR args ====\n")
+print(args(MVMR))
+cat("\n==== mv_multiple exists? ====\n")
+print(exists("mv_multiple"))
+if (exists("mv_multiple")) { cat("\n-- mv_multiple args --\n"); print(args(mv_multiple)) }
+cat("\n==== done ====\n")
+sink()
