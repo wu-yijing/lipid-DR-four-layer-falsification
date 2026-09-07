@@ -5,10 +5,12 @@ Analysis code and **desensitized aggregate results** supporting the manuscript
 instrument-dependent: a four-layer falsification of lipid-based diabetic
 retinopathy risk stratification"* (submitted to *Frontiers in Endocrinology*).
 
-This repository contains **only analysis scripts, figure/table-generation code,
-and rendered figures**. It contains **no manuscript text (`.docx`) and no
-individual-level data**. Individual data are held externally under approved
-ethics and are not publicly shared.
+This repository contains **only analysis scripts and figure/table-generation
+code**. It contains **no manuscript text (`.docx`) and no individual-level data**.
+Rendered figures (`figures/Figure1–4`) are **regenerated** by the scripts in
+`figures/` (see *Figures* below) and are not stored here (binary, regenerable).
+Individual data are held externally under approved ethics and are not publicly
+shared.
 
 ## The four-layer framework
 
@@ -26,6 +28,22 @@ ethics and are not publicly shared.
 - **Figures & tables:** Python 3.13 (`matplotlib`, `python-docx`, `Pillow`).
 - Run order follows the layer numbering; each script reads external data from
   paths documented at the top of the file and writes aggregate outputs.
+
+## Figures
+
+All four main figures ship as **source-generated** outputs and are **not**
+committed to the repository (PNGs are binary and regenerable from code). To
+regenerate:
+
+- `figures/draw_figs.py` — Figures 1–2 (study design + MR forest) and the
+  calibration / slope panels.
+- `figures/phase6_fig1_design.py`, `figures/phase6_fig2_forest.R`,
+  `figures/phase6_fig4_roc.R` — layer-specific panels.
+- `figures/build_docx.py` — assembles the final figure/table set into the
+  manuscript layout.
+
+Run the Python scripts with `matplotlib` / `Pillow` available; the `.R` figure
+scripts need `TwoSampleMR` / `MendelianRandomization`.
 
 ## Key quantitative findings (aggregate)
 
