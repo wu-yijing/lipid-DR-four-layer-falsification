@@ -42,3 +42,9 @@ __pycache__/
 *.Rproj.user/
 .venv/
 .ipynb_checkpoints/
+
+# ===== exception: de-identified AGGREGATE result tables ARE shipped =====
+# (must come AFTER *.csv / *_out/ : later patterns take precedence)
+!output_tables/
+!output_tables/**
+!output_tables/*.csv

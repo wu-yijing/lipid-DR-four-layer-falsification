@@ -1,0 +1,9 @@
+"var","n_missing","pct_missing","missing_in_cases","missing_in_controls"
+"age10",1,0.05,0,1
+"male",0,0,0,0
+"tg_log",398,20.24,82,316
+"tc",562,28.59,109,453
+"hdl_c",645,32.81,132,513
+"ldl_c",563,28.64,111,452
+"apo_a1",435,22.13,71,364
+"apo_b",488,24.82,99,389

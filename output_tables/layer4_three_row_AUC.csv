@@ -1,0 +1,5 @@
+"row","n","AUC_unweighted","AUC_MEC_weighted"
+"transported_Chinese_lipid",888,0.505262142129102,0.52491498972604
+"local_lipid_only_core",888,0.51502650672167,0.527298203825123
+"local_lipid_only_std",888,0.486056077246437,0.497244917069634
+"full_reference_model",888,0.733063139674441,0.748283697973648

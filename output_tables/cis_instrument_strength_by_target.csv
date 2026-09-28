@@ -1,0 +1,7 @@
+"target","lipid_trait","n_iv","mean_F","min_F","max_abs_p","positive_control","beta_range"
+"ANGPTL3","TG",1,393.2,393.2,3.50268e-82,TRUE,"-0.069 to -0.069"
+"APOC3","TG",9,300.1,17,5.05697e-07,TRUE,"-0.225 to 0.219"
+"HMGCR","LDL",1,372.1,372.1,7.79112e-78,TRUE,"0.073 to 0.073"
+"LPL","TG",5,240.6,25.1,1.378e-06,TRUE,"-0.170 to 0.191"
+"NPC1L1","LDL",1,98,98,1.92309e-21,TRUE,"0.048 to 0.048"
+"PCSK9","LDL",8,165,21.5,8.59409e-06,FALSE,"-0.497 to 0.090"

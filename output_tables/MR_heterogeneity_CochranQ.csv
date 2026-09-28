@@ -1,0 +1,13 @@
+"id.exposure","id.outcome","outcome","exposure","method","Q","Q_df","Q_pval"
+"ieu-a-299","0lL0sO","outcome","HDL","MR Egger",256.325622076325,82,7.92046951089291e-20
+"ieu-a-299","0lL0sO","outcome","HDL","Inverse variance weighted",257.946568802289,83,8.08458121958989e-20
+"ukb-d-30630_raw","0lL0sO","outcome","ApoA1","MR Egger",427.135964107846,211,8.92123506369602e-17
+"ukb-d-30630_raw","0lL0sO","outcome","ApoA1","Inverse variance weighted",427.137591528404,212,1.27598453229826e-16
+"ukb-d-30640_raw","0lL0sO","outcome","ApoB","MR Egger",249.237810760845,149,4.96395601993045e-07
+"ukb-d-30640_raw","0lL0sO","outcome","ApoB","Inverse variance weighted",251.989573176722,150,3.64148623030102e-07
+"ieu-a-301","0lL0sO","outcome","TC","MR Egger",242.681933200482,84,2.50369478045117e-17
+"ieu-a-301","0lL0sO","outcome","TC","Inverse variance weighted",243.80783895441,85,2.95686843271011e-17
+"ieu-a-300","0lL0sO","outcome","LDL","MR Egger",160.975742626149,71,6.13959988173625e-09
+"ieu-a-300","0lL0sO","outcome","LDL","Inverse variance weighted",161.620353421158,72,7.78874392452729e-09
+"ieu-a-302","0lL0sO","outcome","TG","MR Egger",104.034165674259,53,3.57992671685248e-05
+"ieu-a-302","0lL0sO","outcome","TG","Inverse variance weighted",108.943470796029,54,1.40464649101455e-05
