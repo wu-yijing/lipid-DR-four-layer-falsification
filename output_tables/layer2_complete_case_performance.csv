@@ -1,0 +1,7 @@
+"metric","value"
+"AUC_apparent",0.598387180485273
+"AUC_optimism_corrected",0.579434116640717
+"Brier",0.18805203280513
+"calib_slope",1.00000000000115
+"calib_intercept",1.07101764644314e-12
+"IDI",0.0198781073132816

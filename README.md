@@ -1,9 +1,8 @@
 # Lipid-based DR risk stratification: a four-layer falsification
 
 Analysis code and **de-identified aggregate results** supporting the manuscript
-*"Missing-data handling and instrument choice both change the conclusion: a four-layer
-falsification of lipid-based diabetic retinopathy risk stratification"* (submitted to
-*Frontiers in Endocrinology*).
+*"A misclassified outcome can masquerade as a missing-data effect: a four-layer falsification of
+lipid-based diabetic retinopathy risk stratification"* (submitted to *Frontiers in Endocrinology*).
 
 This repository contains **analysis scripts, figure/table-generation code, and de-identified
 aggregate outputs** (`output_tables/`). It contains **no manuscript text (`.docx`) and no
@@ -23,34 +22,52 @@ the scripts in `figures/` and are not committed (binary, regenerable).
 
 ## Key quantitative findings (aggregate)
 
-- **Causal (layer 1).** Univariable TG OR 0.86 (p = 0.009) does not survive Bonferroni
-  correction (0.05/6 = 0.0083), attenuates to 0.94 (p = 0.24) after multivariable MR, and is
-  not reproduced by any of six cis drug-target analyses. MR-PRESSO outlier correction returns
-  0.878 (p = 0.0045), so even the multiple-testing verdict depends on which analysis is
-  treated as primary — four analyses, four answers, no robust independent effect.
-- **Discrimination (layer 2).** Optimism-corrected complete-case AUC 0.668 versus 0.608 under
-  multiply imputed analysis (m = 50, maxit = 50, single age coding, three seeds;
-  per-seed means 0.6226–0.6295). The ~0.06 gap is **not** explained by selection: inverse
-  probability of selection weighting reproduces the full-cohort event rate exactly
-  (0.1399 versus 0.1400) and leaves discrimination essentially unchanged
-  (0.6923 → 0.6920). A three-row decomposition attributes the gap mainly to differences in
-  the analysis populations. Both handlings should therefore be reported; neither is an
-  unbiased reference.
-- **Transportability (layer 3).** Chinese coefficients applied to the NHANES 2005–2008
-  diabetes subgroup give AUC 0.513 / 0.530 / 0.477 (MEC-weighted 0.537 / 0.572 / 0.468), with
-  95% CIs including 0.5, under both weightings. Discrimination failure is robust; the apparent
-  severe miscalibration is partly a survey-design artefact (weighted calibration slopes
-  0.79 / 0.94 / −0.17).
+All layer-2 to layer-4 numbers below come from the **corrected outcome**: the DR grade was
+rebuilt from the source ophthalmology text after the derived ordinal severity field was found to
+store non-proliferative DR in the code reserved for ungradable photographs
+(`layer2_outcome_rebuild_*.csv`).
+
+- **Outcome reconstruction (layer 2 prerequisite).** The defective field classified 275
+  participants as cases, of whom only **4** carried an explicit DR diagnosis in the source text,
+  while **455** participants with an explicit diagnosis were analysed as non-cases
+  (`layer2_outcome_rebuild_crosstab.csv`). Rebuilding from the source text gives 1,971 gradable
+  participants and **474** DR events (24.0%) — including 24 cases of proliferative DR, against 14
+  under the defective field.
+- **Causal (layer 1).** Univariable TG OR 0.86 (p = 0.009) does not survive Bonferroni correction
+  (0.05/6 = 0.0083), attenuates to 0.94 (p = 0.24) after multivariable MR, and is not reproduced
+  by any of six cis drug-target analyses. MR-PRESSO outlier correction returns 0.878
+  (p = 0.0045), so even the multiple-testing verdict depends on which analysis is treated as
+  primary — four analyses, four answers, no robust independent effect.
+- **Discrimination (layer 2).** Optimism-corrected complete-case AUC **0.579** versus **0.582**
+  under multiply imputed analysis (m = 50, maxit = 50, single age coding, three seeds): the two
+  handlings agree, difference -0.003 (95% CI -0.004 to 0.012). Inverse-probability-of-selection
+  weighting reproduces the full-cohort event rate (0.2407 versus 0.2405) and leaves
+  discrimination essentially unchanged (0.5984 -> 0.5990); a three-row decomposition gives
+  0.579 / 0.597 / 0.582. Missingness is outcome-associated in the clinically expected direction
+  (OR 0.70 for >=1 lipid missing, p = 0.0033).
+  **With the defective outcome the same pipeline reported complete cases 0.668 versus
+  multiply-imputed 0.608 (a gap of about 0.06) and protective-looking missingness
+  (coefficient -0.84, p = 2.2e-10).** That discrepancy — reported in an earlier version of this
+  work as a missing-data finding — was an artefact of the outcome variable.
+- **Transportability (layer 3).** Chinese coefficients applied to the NHANES 2005–2008 diabetes
+  subgroup give AUC **0.498 / 0.493 / 0.551** (MEC-weighted 0.479 / 0.458 / 0.648), with 95% CIs
+  including 0.5. The core and std versions are at or below chance under both weightings, and the
+  MEC-weighted calibration slopes are negative (-0.91 and -1.81), so the transferred linear
+  predictor reverses direction in the target population rather than merely drifting in scale.
+  An MI-pooled export gives the same picture (0.517 / 0.518).
 - **Benchmark (layer 4).** Full NHANES reference model AUC 0.733 (weighted 0.749; temporal
   validation 0.748 / 0.722), against 0.515 for a lipid-only model fitted locally in NHANES and
-  0.505 for the transported Chinese score. The increment over the locally fitted lipid-only
-  model is 0.218, of which only 0.010 is attributable to cross-population transport — the
-  deficit lies in the lipid information itself.
+  **0.486** for the transported Chinese score. The increment over the locally fitted lipid-only
+  model is 0.218, of which only 0.029 is attributable to cross-population transport — the deficit
+  lies in the lipid information itself.
 
-Two consequences of analytical choices — missing-data handling, and instrument/target-set
-selection — are therefore quantified rather than assumed, and both belong among the routine
-robustness checks of prediction studies built on routine tests or EMR data, and of MR studies
-used to justify drug targets.
+Two consequences of analytical choices are therefore quantified rather than assumed. The first is
+that a complete-case/imputation discrepancy can be manufactured by an outcome-definition error:
+because the outcome enters the missingness model, the imputation model and the discrimination
+estimate at once, a miscoded outcome distorts the comparison at every point and will look exactly
+like a missing-data effect. The second is that MR estimates depend on instrument and target-set
+selection. Both belong among the routine robustness checks of prediction studies built on
+routinely coded EMR data, and of MR studies used to justify drug targets.
 
 ## Reproducibility
 
@@ -59,14 +76,19 @@ used to justify drug targets.
 - **Figures & tables:** Python 3.13 (`matplotlib`, `python-docx`, `Pillow`).
 - Run order follows the layer numbering; each script reads external data from paths documented
   at the top of the file and writes aggregate outputs.
+- Scripts suffixed `_v2` implement the corrected-outcome pipeline and read `dev_set_v2.csv`;
+  `rebuild_outcome.py` and `build_dev_v2.py` construct that outcome from the raw screening
+  records. The `_v2` scripts write to `*_out_v2/` and `v2_*` files.
 
 ## Figures
 
 All four main figures ship as source-generated outputs and are **not** committed (PNGs are
 binary and regenerable):
 
-- `figures/draw_figs_v7.py` — the current figure set (study design, MR forest, calibration,
-  three-curve ROC).
+- `figures/draw_figs_v8.py` — the current figure set (study design, MR forest, calibration,
+  three-curve ROC), reading the corrected-outcome outputs; generated from
+  `figures/make_figs_v8.py`.
+- `figures/draw_figs_v7.py` — the previous figure set (superseded; kept for provenance).
 - `figures/phase6_fig1_design.py`, `figures/phase6_fig2_forest.R`, `figures/phase6_fig4_roc.R`
   — earlier per-panel scripts.
 - `figures/make_supplementary_and_tiff.py` — assembles the supplementary tables and the
@@ -74,19 +96,25 @@ binary and regenerable):
 
 ## Running the scripts
 
-Absolute paths appear at the top of each script (e.g. ) and point to
-the author''s local analysis directory, because the inputs — the de-identified Chinese cohort
+Absolute paths appear at the top of each script (for example an `OUT <-` assignment) and point to
+the author's local analysis directory, because the inputs — the de-identified Chinese cohort
 extract and the NHANES working set — are not distributed with this repository. Repoint those
-paths to a local directory before running; the file names in  indicate which
+paths to a local directory before running; the file names in `output_tables/` indicate which
 script produces which aggregate output.
 
-## Provenance note
+## Provenance notes
 
-`phase2e_redo.R` (preserved as run on 2026-09-12) aborted inside its `pmsampsize` block, which
-passed both `csrsquared` and `cstatistic`; pmsampsize 1.1.3 accepts only one. It therefore
-never wrote four of its intended outputs. `phase2e_redo2.R` re-runs the identical analysis and
-writes them; `phase2e_tail2.R` completes the sample-size grid. All numbers in
-`output_tables/layer2_*.csv` come from these scripts.
+1. `phase2e_redo.R` (preserved as run on 2026-09-12) aborted inside its `pmsampsize` block, which
+   passed both `csrsquared` and `cstatistic`; pmsampsize 1.1.3 accepts only one. It therefore
+   never wrote four of its intended outputs. `phase2e_redo2.R` re-runs the identical analysis and
+   writes them; `phase2e_tail2.R` completes the sample-size grid.
+2. The derived severity field in the source records was populated by testing diagnosis keywords
+   in a fixed order, with the proliferative keyword tested before the non-proliferative ones;
+   because "moderate non-proliferative diabetic retinopathy" contains the proliferative
+   substring, almost every NPDR record matched the first test and was stored in the code the
+   pipeline read as "ungradable". `rebuild_outcome.py` documents the corrected parsing rules and
+   `layer2_outcome_rebuild_crosstab.csv` reports the full cross-tabulation against the source
+   text.
 
 ## License
 

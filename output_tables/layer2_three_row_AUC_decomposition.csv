@@ -1,7 +1,7 @@
-"row","AUC","source"
-"1_CCcoef_to_CCsubset_apparent",0.6923,"phase2e_redo2.log"
-"2_CCcoef_to_CCsubset_corrected",0.6678,"phase2e_redo2.log"
-"3_CCcoef_to_MIcohort",0.5666,"phase2e_redo2.log"
-"4_MIcoef_to_MIcohort_apparent",0.6266,"phase2e_redo2.log"
-"5_MIcoef_to_MIcohort_corrected",0.6083,"phase2e_redo2.log"
-"6_IPW_CC_subset",0.692,"phase2e_ipw.log"
+"row","AUC"
+"1_CCcoef_to_CCsubset_apparent",0.598387180485273
+"2_CCcoef_to_CCsubset_corrected",0.578991519482712
+"3_CCcoef_to_MIcohort",0.596694683318818
+"4_MIcoef_to_MIcohort_apparent",0.597527882769759
+"5_MIcoef_to_MIcohort_corrected",0.582261117529348
+"6_IPW_CC_subset",0.599023528485812

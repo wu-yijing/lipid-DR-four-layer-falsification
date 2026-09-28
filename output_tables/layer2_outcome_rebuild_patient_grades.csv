@@ -1,0 +1,9 @@
+patient_grade,n
+G0_no_DR,1497
+G1_mild_NPDR,49
+G2_moderate_NPDR,386
+G3_severe_NPDR,15
+G4_proliferative_DR,24
+gradable_total,1971
+any_DR_(>=G1),474
+excluded_from_primary_analysis,511
