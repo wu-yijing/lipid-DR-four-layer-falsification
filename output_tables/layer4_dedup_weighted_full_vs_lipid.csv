@@ -1,0 +1,9 @@
+"metric","value"
+"AUC_full_oof_w",0.749488367798712
+"AUC_lipid_only_w",0.457626399141235
+"Brier_full_oof_w",0.175673603897433
+"Brier_lipid_only_w",0.202693783134889
+"AUC_full_oof_unw",0.733738623821672
+"AUC_lipid_only_unw",0.478224682914473
+"Brier_full_oof_unw",0.187075013499024
+"Brier_lipid_only_unw",0.212488711754869

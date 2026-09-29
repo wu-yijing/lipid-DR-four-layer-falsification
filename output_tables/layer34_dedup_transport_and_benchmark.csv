@@ -1,0 +1,11 @@
+Quantity,All screening records (primary analysis),Most recent record per patient (sensitivity analysis)
+core: AUC unweighted / MEC-weighted,0.498 / 0.479,0.490 / 0.468
+std: AUC unweighted / MEC-weighted,0.493 / 0.458,0.485 / 0.439
+LASSO (exploratory): AUC unweighted / MEC-weighted,0.551 / 0.648,0.551 / 0.646
+"MEC-weighted calibration slope, core / std",-0.91 / -1.81,-1.65 / -3.19
+Transported Chinese lipid score: AUC unweighted / MEC-weighted,0.486 / 0.467,0.478 / 0.458
+Locally fitted lipid-only model (NHANES-internal): AUC unweighted / MEC-weighted,0.515 / 0.527,0.515 / 0.527
+Full NHANES reference model: AUC unweighted / MEC-weighted,0.733 / 0.748,0.733 / 0.748
+Increment: full model − locally fitted lipid-only,0.218,0.218
+Increment: locally fitted − transported Chinese score,0.029,0.037
+NRI; IDI for the full model over the transported score,0.410; 0.152,0.408; 0.152

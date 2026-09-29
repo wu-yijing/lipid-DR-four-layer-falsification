@@ -1,0 +1,9 @@
+item,n
+screening records (primary analysis),2482
+records after deduplication (sensitivity),2333
+distinct patient identifiers,2333
+identifiers with >1 record,137
+"of those, across different years",113
+identifiers with >1 record in their most recent year,26
+"of those, records disagreeing on any DR",6
+"of those, records disagreeing on gradability",1

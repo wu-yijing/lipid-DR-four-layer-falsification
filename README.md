@@ -61,6 +61,15 @@ store non-proliferative DR in the code reserved for ungradable photographs
   model is 0.218, of which only 0.029 is attributable to cross-population transport — the deficit
   lies in the lipid information itself.
 
+**Sensitivity analysis for repeat screening.** The cohort is a series of screening records:
+2,482 records were contributed by 2,333 patient identifiers, 137 of which appear more than once.
+Retaining only the most recent record per identifier (2,333 records; 1,868 gradeable; 453 events,
+24.3%) leaves every conclusion unchanged — complete-case versus multiply-imputed discrimination
++0.005 (95% CI -0.004 to 0.014), missingness OR for any DR 0.70 (p = 0.0063), core / std transport
+AUC 0.490 / 0.485 with MEC-weighted calibration slopes of -1.65 / -3.19, and the full model's
+increment over a locally fitted lipid-only model still 0.218
+(`layer2_dedup_*.csv`, `layer34_dedup_*.csv`, `layer2_dedup_screening_selection_rule.csv`).
+
 Two consequences of analytical choices are therefore quantified rather than assumed. The first is
 that a complete-case/imputation discrepancy can be manufactured by an outcome-definition error:
 because the outcome enters the missingness model, the imputation model and the discrimination
@@ -76,6 +85,8 @@ routinely coded EMR data, and of MR studies used to justify drug targets.
 - **Figures & tables:** Python 3.13 (`matplotlib`, `python-docx`, `Pillow`).
 - Run order follows the layer numbering; each script reads external data from paths documented
   at the top of the file and writes aggregate outputs.
+- Scripts suffixed `_dedup` implement the repeat-screening sensitivity analysis (one
+  record per patient) and read `dev_set_v2_dedup.csv`.
 - Scripts suffixed `_v2` implement the corrected-outcome pipeline and read `dev_set_v2.csv`;
   `rebuild_outcome.py` and `build_dev_v2.py` construct that outcome from the raw screening
   records. The `_v2` scripts write to `*_out_v2/` and `v2_*` files.

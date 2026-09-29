@@ -1,0 +1,10 @@
+Quantity,All screening records (primary analysis),Most recent record per patient (sensitivity analysis)
+"Complete-case AUC, apparent",0.598,0.597
+"Complete-case AUC, optimism-corrected",0.579,0.577
+"Multiply-imputed AUC, optimism-corrected",0.582,0.577
+"Difference (complete cases − multiple imputation), 95% CI",+0.004 (-0.004 to 0.012),+0.005 (-0.004 to 0.014)
+Bootstrap P(complete cases > multiple imputation),0.80,0.85
+IPW-weighted complete-case AUC (unweighted),0.5990 (0.5984),0.5978 (0.5970)
+Missingness OR for any DR (p),2.75 (0.0033),2.86 (0.0063)
+"Lipid increment over age + sex, IDI",0.020,0.019
+Highest variance inflation factor (LDL-C),14.75,14.68

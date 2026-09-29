@@ -1,0 +1,8 @@
+Quantity,All screening records (primary analysis),Most recent record per patient (sensitivity analysis)
+Screening records analysed,"2,482","2,333"
+Gradeable participants,"1,971","1,868"
+Any-DR events,474 (24.0%),453 (24.3%)
+Proliferative DR,24,23
+Complete cases (events),"1,417 (367; 25.9%)","1,358 (353; 26.0%)"
+Events per variable (8 parameters),45.9,44.1
+"Lipid missingness, range across six lipids",14.4-23.5%,14.0-22.8%

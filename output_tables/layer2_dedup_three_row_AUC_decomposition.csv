@@ -1,0 +1,7 @@
+"row","AUC"
+"1_CCcoef_to_CCsubset_apparent",0.596989556466957
+"2_CCcoef_to_CCsubset_corrected",0.57650865855607
+"3_CCcoef_to_MIcohort",0.592751851938523
+"4_MIcoef_to_MIcohort_apparent",0.593372626411542
+"5_MIcoef_to_MIcohort_corrected",0.576828977400875
+"6_IPW_CC_subset",0.59778166179293
