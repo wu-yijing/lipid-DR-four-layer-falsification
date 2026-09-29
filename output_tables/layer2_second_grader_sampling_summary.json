@@ -1,0 +1,26 @@
+{
+  "total": 251,
+  "by_tier": {
+    "1": 185,
+    "2": 46,
+    "3": 20
+  },
+  "cumulative_tier_1_2": 231,
+  "by_stratum": {
+    "A3 all G1 mild NPDR": 49,
+    "C random population-representative": 40,
+    "A4 random G2 moderate NPDR": 31,
+    "A5 random G0 no DR": 31,
+    "B2 graded G0 but positive lesion flag": 27,
+    "A1 all G4 proliferative": 24,
+    "A2 all G3 severe NPDR": 15,
+    "D2 excluded, DR not mentioned": 10,
+    "D1 excluded, DR mentioned, no grade": 10,
+    "B1 \"suspected\" stated, no grade given": 8,
+    "D3 drove pre-adjudication disagreement": 6
+  },
+  "gradable": 220,
+  "not_gradable": 31,
+  "enriched_DR_prevalence_pct": 55.91,
+  "seed": 20260929
+}

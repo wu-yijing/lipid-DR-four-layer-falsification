@@ -48,3 +48,17 @@ __pycache__/
 !output_tables/
 !output_tables/**
 !output_tables/*.csv
+
+# ===== 2026-09-29 数据保护补丁：个体层记录，严禁进入公开仓库 =====
+# 下列文件位于 output_tables/，而该目录被上面的 !output_tables/** 显式反忽略；
+# 它们含 12 位院内记录号（pid），其中两份还含年份/性别/年龄/中文报告原文。
+# gitignore 规则“后写胜”，故必须放在 !output_tables/** 之后。内部留存，勿删。
+output_tables/layer2_independent_reextraction.csv
+output_tables/layer2_independent_reextraction_discordances.csv
+output_tables/layer2_independent_reextraction_discordances_preadjudication.csv
+output_tables/layer2_second_grader_sampling.csv
+output_tables/layer2_text_mode_practice_key.csv
+output_tables/layer2_text_mode_discordances.csv
+/.gitignore.bak_*
+output_tables/layer2_text_mode_5level_matrix__selftest_returnedxlsx.csv
+output_tables/layer2_text_mode_agreement__selftest_returnedxlsx.json
