@@ -62,3 +62,7 @@ output_tables/layer2_text_mode_discordances.csv
 /.gitignore.bak_*
 output_tables/layer2_text_mode_5level_matrix__selftest_returnedxlsx.csv
 output_tables/layer2_text_mode_agreement__selftest_returnedxlsx.json
+
+# local backup of files edited on 2026-10-09 (see REVISION_NOTES_20261009.md)
+_bak_before_reportfix_20261009/
+_artefact_map.json

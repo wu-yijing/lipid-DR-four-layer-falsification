@@ -1,0 +1,8 @@
+statistic,interval,where,action
+layer-2 complete-case AUC (apparent and optimism-corrected),supplied here,layer2_reporting_gaps.csv,quote the interval in Section 3.2 / Table 3
+layer-2 lipid IDI,supplied here,layer2_reporting_gaps.csv,quote the interval
+layer-2 NRI at the 25.5% threshold,not supplied,-,"quote a bootstrap interval, or drop NRI and reason from the IDI"
+multiply-imputed pooled AUC (0.582),not supplied by this script,3_prediction/phase10b_mi_auc_ci.R,"re-run the converged MI with the settings recorded there; note that the interval that carries the paper's claim is already reported, namely the paired bootstrap of the complete-case minus imputation difference (+0.004, 95% CI -0.004 to 0.012, layer2_delta_auc_bootstrap.csv)"
+layer-2 apparent calibration slope 1.000 / intercept 0.000,n/a (exact by construction),layer2_reporting_gaps.csv,"label these as apparent wherever they are quoted, so they are not read as calibration in new data"
+layer-4 NRI 0.410 and IDI 0.152,not supplied,layer4_increment_NRI_IDI.csv (SUPERSEDED; see PROVENANCE.md),"recompute on the current fold split, and supply intervals"
+collinearity: design-matrix condition number,n/a,layer2_design_condition_numbers.csv,state which of the three bases the quoted value refers to

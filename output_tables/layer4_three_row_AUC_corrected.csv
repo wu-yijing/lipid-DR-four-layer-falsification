@@ -1,0 +1,5 @@
+"row","n","events","AUC_unweighted","AUC_MEC_weighted","status"
+"transported_Chinese_lipid",888,267,0.485987,0.466869,"unchanged"
+"local_lipid_only_core",888,267,0.515027,0.527298,"unchanged"
+"local_lipid_only_std",415,130,0.498812,0.520895,"CORRECTED (committed row had n=888 and AUC 0.4861/0.4972)"
+"full_reference_model",888,267,0.733063,0.748284,"unchanged"

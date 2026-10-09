@@ -17,6 +17,17 @@ os.makedirs(OUT, exist_ok=True)
 rng = np.random.default_rng(20260929)
 LIP = ['tg', 'tc', 'hdl_c', 'ldl_c', 'apo_a1', 'apo_b']
 
+# 2026-10-09: explicit marker classes. The manuscript described this set as "each lipid
+# (six), each derived index (four) and each apolipoprotein separately (two)", which reads
+# as twelve models; the set is ten. Naming the class per row makes the count auditable.
+LIPID4 = {'TG (log2)', 'Total cholesterol', 'HDL-C', 'LDL-C'}
+APO2 = {'ApoA-I', 'ApoB'}
+
+
+def marker_class(label):
+    return ('conventional lipid' if label in LIPID4
+            else 'apolipoprotein' if label in APO2 else 'derived index')
+
 dev2 = pd.read_csv(f"{SRC}/dev_set_v2.csv", low_memory=False)
 dev1 = pd.read_csv(f"{SRC}/dev_set.csv", low_memory=False)
 assert (dev1['id'].values == dev2['id'].values).all(), "dev sets are no longer row-aligned"
@@ -63,7 +74,8 @@ for label, col in MARKERS:
     boot = np.array(boot)
     lo, hi = np.nanpercentile(boot[:, 2], [2.5, 97.5])
     opt_a = np.nanmean(boot[:, 0] - boot[:, 3]); opt_b = np.nanmean(boot[:, 1] - boot[:, 4])
-    rows.append(dict(marker=label, n=n, events=int(y.sum()), auc_age_sex=round(a_app, 3),
+    rows.append(dict(marker=label, marker_class=marker_class(label), n=n, events=int(y.sum()),
+                     auc_age_sex=round(a_app, 3),
                      auc_plus_marker=round(b_app, 3), dAUC=round(b_app - a_app, 3),
                      dAUC_lo=round(lo, 3), dAUC_hi=round(hi, 3),
                      dAUC_optimism_corrected=round((b_app - opt_b) - (a_app - opt_a), 3)))

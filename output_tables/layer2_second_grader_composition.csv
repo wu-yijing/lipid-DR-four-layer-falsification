@@ -1,0 +1,12 @@
+stratum,description,n,group
+A1 all G4 proliferative,every record graded proliferative DR,24,A
+A2 all G3 severe NPDR,every record graded severe NPDR,15,A
+A3 all G1 mild NPDR,every record graded mild NPDR (the rarest gradable stratum),49,A
+A4 random G2 moderate NPDR,random sample of moderate NPDR,31,A
+A5 random G0 no DR,random sample of grade 0 (no DR),31,A
+"B1 ""suspected"" stated, no grade given",records stating suspected retinopathy without a grade,8,B
+B2 graded G0 but positive lesion flag,records graded no DR that carry a positive lesion descriptor,27,B
+C random population-representative,random sample of the analysis population (reproduces prevalence),40,C
+"D1 excluded, DR mentioned, no grade",excluded records that mention DR without a grade,10,D
+"D2 excluded, DR not mentioned",excluded records that do not mention DR,10,D
+D3 drove pre-adjudication disagreement,the records that drove pre-adjudication disagreement,6,D

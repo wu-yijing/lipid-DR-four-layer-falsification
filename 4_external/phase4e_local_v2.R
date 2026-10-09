@@ -62,6 +62,18 @@ cat(sprintf("reference subset n=%d events=%d (%.1f%%); lipids available: TC+HDL=
 
 ## ---------------- common 10-fold split ----------------
 fold <- sample(rep(1:10, length.out = nrow(dref)))
+## 2026-10-09 FIX (alignment defect, see tools/audit_repo_consistency.py check F2).
+## The previous body was
+##     p[fold == k] <- plogis(as.numeric(model.matrix(fmla, data = te) %*% as.numeric(coef(f))))
+## which is wrong whenever a model's predictors contain missing values: model.matrix()
+## drops the incomplete rows, the replacement vector is then shorter than p[fold == k],
+## and R recycles it with a warning instead of failing. Only fml_lip_std is affected
+## here (tg_log and ldl_mmol are missing in 473 of the 888 reference records), and the
+## consequence was that the committed local_lipid_only_std row reported n = 888 and
+## AUC 0.4861 for a quantity that exists on 415 records and is 0.4988. Predictions are
+## now written back to their own row positions and the length is asserted, so the
+## failure mode cannot recur silently. Re-running this script therefore CHANGES the
+## local_lipid_only_std row of phase4e_three_row.csv; the other rows are unchanged.
 oof <- function(fmla, dat, wcol = NULL) {
   p <- rep(NA_real_, nrow(dat))
   for (k in 1:10) {
@@ -69,7 +81,11 @@ oof <- function(fmla, dat, wcol = NULL) {
     f <- try(if (is.null(wcol)) glm(fmla, data = tr, family = binomial())
              else survey::svyglm(fmla, design = survey::svydesign(ids = ~1, weights = as.formula(paste0("~", wcol)), data = tr), family = binomial()), silent = TRUE)
     if (inherits(f, "try-error")) next
-    p[fold == k] <- plogis(as.numeric(model.matrix(fmla, data = te) %*% as.numeric(coef(f))))
+    okk <- complete.cases(model.frame(fmla, data = te, na.action = na.pass))
+    if (!any(okk)) next
+    pr <- as.numeric(predict(f, newdata = te[okk, , drop = FALSE], type = "response"))
+    stopifnot(length(pr) == sum(okk))
+    p[which(fold == k)[okk]] <- pr
   }
   p
 }

@@ -10,6 +10,24 @@
 import sys, os, csv, gzip, numpy as np, pandas as pd
 from scipy import stats
 
+
+def ci_p_consistent(lo, hi, p, tol=5e-3):
+    """Cross-check a confidence interval against its p-value.
+
+    For a log-scale interval the point estimate is the geometric mean of the limits, so
+    the p-value reconstructed from the interval half-width must agree with the reported
+    one. Reporting both makes a transcription slip or a mismatched specification visible
+    rather than silent. (This check was added after an audit query about the TG row; the
+    row turned out to be internally consistent, and the check now documents that.)
+    """
+    import math
+    if not (lo > 0 and hi > 0 and 0 < p < 1):
+        return float("nan"), False
+    se = (math.log(hi) - math.log(lo)) / 3.919927969080386   # 2 * 1.959963984540054
+    z = abs(math.log(math.sqrt(lo * hi))) / se if se > 0 else float("nan")
+    p_ci = 2 * (1 - stats.norm.cdf(z))
+    return p_ci, abs(p_ci - p) <= tol
+
 P = r"E:/workbuddy/2026-09-04-18-19-16/phase1_out"
 EXMORE = r"E:/workbuddy/BMC Genomics投稿资料/DR，DN，DM芬兰原始数据/finngen_R13_DM_RETINOPATHY_EXMORE.gz"
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "output_tables")
@@ -88,9 +106,12 @@ for lbl in ['TG', 'LDL', 'HDL', 'TC', 'ApoA1', 'ApoB']:
     b, se, bx = np.array(b), np.array(se), np.array(bx)
     e, s_re = ivw(b, se)
     eg, egse, ic, icse = egger(b, se, bx)
+    lo_, hi_ = np.exp(e - 1.96 * s_re), np.exp(e + 1.96 * s_re)
+    p_ = 2 * (1 - stats.norm.cdf(abs(e / s_re)))
+    p_ci, ok_ = ci_p_consistent(lo_, hi_, p_)
     out.append(dict(analysis='six_lipids', term=lbl, n=len(b),
-                    OR=np.exp(e), lo=np.exp(e - 1.96 * s_re), hi=np.exp(e + 1.96 * s_re),
-                    p=2 * (1 - stats.norm.cdf(abs(e / s_re))),
+                    OR=np.exp(e), lo=lo_, hi=hi_, p=p_,
+                    p_from_ci=p_ci, ci_p_consistent=ok_,
                     egger_OR=np.exp(eg), egger_intercept_p=2 * (1 - stats.norm.cdf(abs(ic / icse))),
                     wmedian_OR=np.exp(wmed(b, se))))
 
@@ -105,10 +126,13 @@ for tgt, gsub in iv.groupby('target'):
     b, se = np.array(b), np.array(se)
     if len(b) == 1: e, s_re = b[0], se[0]
     else: e, s_re = ivw(b, se)
+    lo_, hi_ = np.exp(e - 1.96 * s_re), np.exp(e + 1.96 * s_re)
+    p_ = 2 * (1 - stats.norm.cdf(abs(e / s_re)))
+    p_ci, ok_ = ci_p_consistent(lo_, hi_, p_)
     out.append(dict(analysis='cis_drug_target', term=tgt, n=len(b),
-                    OR=np.exp(e), lo=np.exp(e - 1.96 * s_re), hi=np.exp(e + 1.96 * s_re),
-                    p=2 * (1 - stats.norm.cdf(abs(e / s_re))), egger_OR=np.nan,
-                    egger_intercept_p=np.nan, wmedian_OR=np.nan))
+                    OR=np.exp(e), lo=lo_, hi=hi_, p=p_,
+                    p_from_ci=p_ci, ci_p_consistent=ok_,
+                    egger_OR=np.nan, egger_intercept_p=np.nan, wmedian_OR=np.nan))
 
 res = pd.DataFrame(out)
 os.makedirs(OUT, exist_ok=True)

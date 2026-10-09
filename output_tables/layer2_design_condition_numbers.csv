@@ -1,0 +1,4 @@
+basis,condition_number
+"raw (mmol/L, g/L and years on their measured scales, with intercept)",75.01
+"column-standardised (centred and scaled to unit SD, with intercept)",8.54
+correlation matrix of the eight predictors (no intercept),73.0
