@@ -524,6 +524,20 @@
   ],
   "provenance": "direct"
  },
+ "layer4_lipid_increment_negative_control.csv": {
+  "committed": "layer4_lipid_increment_negative_control.csv",
+  "written_by": [
+   "4_external/phase11_lipid_increment_over_full_model.R"
+  ],
+  "provenance": "direct"
+ },
+ "layer4_lipid_increment_over_full_model.csv": {
+  "committed": "layer4_lipid_increment_over_full_model.csv",
+  "written_by": [
+   "4_external/phase11_lipid_increment_over_full_model.R"
+  ],
+  "provenance": "direct"
+ },
  "layer4_local_comparator_increment.csv": {
   "committed": "layer4_local_comparator_increment.csv",
   "written_by": [

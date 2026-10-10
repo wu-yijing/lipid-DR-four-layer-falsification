@@ -126,6 +126,11 @@ VARIANT = {
     "layer2_reporting_gap_inventory.csv": ("primary", "audit trail - statistics still without an interval"),
     "layer4_local_comparator_increment.csv": ("primary", "Section 3.4 - attributable increment with intervals"),
     "layer4_three_row_AUC_corrected.csv": ("primary", "Section 3.4 - corrected three-row comparison"),
+    # added 2026-10-10: the reverse-direction increment, lipids added on top of the
+    # full reference model, with a negative control that substitutes the same number
+    # of random variables for the lipid terms
+    "layer4_lipid_increment_over_full_model.csv": ("primary", "Section 3.4 / Supplementary Table S21 - lipids added to the full reference model"),
+    "layer4_lipid_increment_negative_control.csv": ("primary", "Section 3.4 / Supplementary Table S21 - same-number random-variable control"),
 }
 
 # --------------------------------------------------------------------------

@@ -16,7 +16,7 @@ table stops supporting it.
 
 | class | n | meaning |
 |---|---|---|
-| `direct` | 16 | a committed script writes this exact name into `output_tables/` |
+| `direct` | 18 | a committed script writes this exact name into `output_tables/` |
 | `collected` | 46 | byte-identical to a named output of a named script (rename step made explicit) |
 | `hand-assembled` | 11 | built by hand from script outputs; values re-derived by the audit |
 | `local-only` | 8 | record-level file held locally only; listed in `.gitignore`, never committed |
@@ -86,6 +86,8 @@ screen, so each is stated explicitly.
 | `layer2_second_grader_composition.csv` | primary | `3_prediction/phase10_reporting_gaps.py` | limitation 12 - composition of the review sample |
 | `layer2_second_grader_sampling_summary.json` | primary | `3_prediction/phase9b_second_grader_sampling.py` | limitation 12 re-abstraction plan |
 | `layer2_text_mode_agreement_r2r3_adj.json` | primary | `3_prediction/phase9c_text_mode.py` | Supplementary Table S14a |
+| `layer4_lipid_increment_negative_control.csv` | primary | `4_external/phase11_lipid_increment_over_full_model.R` | Section 3.4 / Supplementary Table S21 - same-number random-variable control |
+| `layer4_lipid_increment_over_full_model.csv` | primary | `4_external/phase11_lipid_increment_over_full_model.R` | Section 3.4 / Supplementary Table S21 - lipids added to the full reference model |
 | `layer4_local_comparator_increment.csv` | primary | `4_external/phase10_local_comparator_increment.R` | Section 3.4 - attributable increment with intervals |
 | `layer4_three_row_AUC_corrected.csv` | primary | `4_external/phase10_local_comparator_increment.R` | Section 3.4 - corrected three-row comparison |
 
