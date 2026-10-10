@@ -748,7 +748,18 @@ CJK = re.compile(r"[\u4e00-\u9fff]")
 # a record identifier would appear as a bare integer token; the lookarounds also
 # exclude long digit runs inside decimals such as 0.0278826712573744, which are
 # estimates rather than identifiers
-LONGDIGITS = re.compile(r"(?<![\d.])\d{9,}(?![\d.])")
+#
+# dbSNP rsIDs are excluded as well. A variant identifier such as "rs112945592"
+# carries a nine-digit numeric part, and dropping its prefix makes it
+# indistinguishable from a bare record number by lookaround alone, so the prefix
+# itself is checked. G5a/G5b below keep the rule falsifiable in both directions.
+LONGDIGITS = re.compile(r"(?<![\d.])(?<![rR][sS])\d{9,}(?![\d.])")
+
+#: Fixtures for the G5 controls. Assembled from expressions rather than written as
+#: literals, because this file is ordinary source as far as the disclosure gate is
+#: concerned, and a literal eleven-digit run here would trip the rule it tests.
+RECORD_FIXTURE = "screening record " + str(2 ** 34)     # an 11-digit record number
+RSID_FIXTURE = "rs" + str(2 ** 29)                      # a dbSNP rsID, 9-digit numeric part
 
 
 def audit_gates():
@@ -823,6 +834,14 @@ def audit_gates():
     dg = root / "tools" / "disclosure_gate.py"
     check(S, "G4b", "tools/disclosure_gate.py exists (run before every public commit)",
           True, dg.exists(), dg.exists())
+    # the digit-run rule is a gate, so prove it can still fail before trusting a
+    # clean report: a bare record number must be caught, an rsID must be ignored
+    check(S, "G5a", "the digit-run detector still catches a synthetic record identifier",
+          "caught", "caught" if LONGDIGITS.search(RECORD_FIXTURE) else "MISSED",
+          bool(LONGDIGITS.search(RECORD_FIXTURE)), note=RECORD_FIXTURE)
+    check(S, "G5b", "the digit-run detector ignores dbSNP rsIDs",
+          "ignored", "ignored" if not LONGDIGITS.search(RSID_FIXTURE) else "FLAGGED",
+          not LONGDIGITS.search(RSID_FIXTURE), note=RSID_FIXTURE)
     check(S, "G5", "no tracked aggregate file contains record identifiers or CJK text",
           0, len(offenders), not offenders,
           note=("; ".join("%s: %d digit-runs, %d CJK" % o for o in offenders[:5])

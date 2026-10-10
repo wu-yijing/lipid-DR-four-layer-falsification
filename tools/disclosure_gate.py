@@ -75,7 +75,19 @@ FORBIDDEN_PATH_PARTS = ["nhanes_raw", "raw/", "/raw/", "data/", "ethics", "‰º¶Áê
 # content patterns
 # --------------------------------------------------------------------------
 # a bare integer token of nine or more digits; decimals and exponents are excluded
-DIGITS = re.compile(r"(?<![\d.])[0-9]{9,}(?![\d.])")
+#
+# dbSNP rsIDs are excluded too: "rs112945592" is a variant identifier, not a record
+# identifier, and its nine-digit numeric part would otherwise read as one. The two
+# controls below (--self-test) keep that distinction falsifiable in both directions.
+DIGITS = re.compile(r"(?<![\d.])(?<![rR][sS])[0-9]{9,}(?![\d.])")
+
+#: Controls for DIGITS. Built from expressions rather than written as literals so that
+#: this file -- which other scanners read as ordinary source -- does not itself contain
+#: a bare nine-digit run.
+DIGIT_CONTROLS = [
+    ("screening record " + str(2 ** 34), True),    # a record number: must be caught
+    ("rs" + str(2 ** 29), False),                  # a dbSNP rsID: must be ignored
+]
 CJK = re.compile(r"[\u4e00-\u9fff]+")
 # clinical / personal vocabulary that has no business in an aggregate table or a script
 CLINICAL = re.compile(
@@ -251,6 +263,25 @@ def scan_history(strict: bool) -> list[tuple]:
     return findings
 
 
+def self_test() -> int:
+    """Check that the digit-run detector still discriminates, in both directions.
+
+    A gate that has stopped matching is worse than no gate: it reports clean while
+    letting identifiers through. Run this before trusting a PASS.
+    """
+    print("digit-run detector controls")
+    bad = 0
+    for sample, must_match in DIGIT_CONTROLS:
+        got = bool(DIGITS.search(sample))
+        ok = got == must_match
+        bad += 0 if ok else 1
+        print("  %-4s %-30s expected=%-7s got=%s"
+              % ("ok" if ok else "FAIL", sample,
+                 "caught" if must_match else "ignored", "caught" if got else "ignored"))
+    print("\nSELF-TEST: %s" % ("PASS" if bad == 0 else "FAIL (%d control(s))" % bad))
+    return 1 if bad else 0
+
+
 def main(argv=None) -> int:
     global args
     ap = argparse.ArgumentParser(description=__doc__,
@@ -258,7 +289,12 @@ def main(argv=None) -> int:
     ap.add_argument("--staged", action="store_true", help="scan only the index")
     ap.add_argument("--history", action="store_true", help="also scan the full commit history")
     ap.add_argument("--strict", action="store_true", help="treat history findings as fatal")
+    ap.add_argument("--self-test", action="store_true",
+                    help="check the digit-run detector, then exit")
     args = ap.parse_args(argv)
+
+    if args.self_test:
+        return self_test()
 
     fatal, warn = scan()
 
