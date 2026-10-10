@@ -878,6 +878,39 @@ def audit_manuscript(path: Path):
         check(S, "E3", "manuscript free of: %s" % why, "absent",
               "absent" if not m else "FOUND: %r" % m.group(0), m is None, fatal=False)
 
+    # The declared word count is only meaningful if it is recomputed rather than
+    # trusted. This check makes the two unable to drift apart again, which is how
+    # the 10,813 figure survived several revisions after the text had grown.
+    P0 = d.paragraphs
+    try:
+        i0 = [i for i, p in enumerate(P0) if p.text.strip().startswith("1. Introduction")][0]
+        i1 = [i for i, p in enumerate(P0) if p.text.strip().startswith("References")][0]
+        seg = P0[i0:i1]
+        dec = [k for k, p in enumerate(seg) if p.text.strip().startswith("Declarations")][0]
+        measured = sum(len(p.text.split()) for p in seg[:dec]
+                       if p.text.strip() and not p.style.name.startswith("Heading"))
+        m = re.search(r"Main text:\s*([\d,]+)\s*words", txt)
+        declared = int(m.group(1).replace(",", "")) if m else None
+        check(S, "E4", "declared main-text word count equals the measured count", measured,
+              declared, declared == measured,
+              note="convention: Introduction..Conclusions, excluding Declarations and headings; "
+                   "the front matter states this exclusion list explicitly")
+    except Exception as exc:                  # never let a missing anchor crash the audit
+        check(S, "E4", "main-text word count computable", True, False, False,
+              fatal=False, note=str(exc))
+
+    # Frontiers caps an Original Research abstract at 350 words; over-length is a
+    # technical-check rejection, so it belongs in the gate rather than in a note.
+    try:
+        a0 = [i for i, p in enumerate(P0) if p.text.strip() == "Abstract"][0]
+        a1 = [i for i, p in enumerate(P0) if p.text.strip().startswith("Keywords")][0]
+        ab = sum(len(P0[i].text.split()) for i in range(a0 + 1, a1) if P0[i].text.strip())
+        check(S, "E5", "abstract within the 350-word limit for Original Research", "<= 350",
+              ab, ab <= 350, note="leaves %d words of headroom" % (350 - ab))
+    except Exception as exc:
+        check(S, "E5", "abstract word count computable", True, False, False,
+              fatal=False, note=str(exc))
+
 
 # --------------------------------------------------------------------------
 # report

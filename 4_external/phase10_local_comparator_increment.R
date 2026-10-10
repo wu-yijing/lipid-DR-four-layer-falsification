@@ -205,13 +205,18 @@ stopifnot(sum(ok_std) < nrow(dref), abs(a_std_corrected - 0.4988) < 5e-3)
 ## Intervals are conditional on the fitted models: participants are resampled and the
 ## frozen predictions reused. The basis is written into the output so an interval
 ## cannot be mistaken for one that re-estimates the model.
+## The bootstrap carries the two AUCs alongside the increments so that the level of
+## discrimination being differenced is itself reported with an interval. Without it the
+## corrected extended-variable-set row would state a point estimate (0.4988) that no
+## committed table brackets, which is the reporting gap the audit flags elsewhere.
 boot_metric <- function(p0, p1, yy, ww, f, rep_n = B) {
-  out <- matrix(NA_real_, rep_n, 3, dimnames = list(NULL, c("dAUC", "NRI", "IDI")))
+  nm <- c("AUC_old", "AUC_new", "dAUC", "NRI", "IDI")
+  out <- matrix(NA_real_, rep_n, length(nm), dimnames = list(NULL, nm))
   n <- length(yy)
   for (i in seq_len(rep_n)) {
     s <- sample(n, n, TRUE)
     out[i, ] <- tryCatch(f(p0[s], p1[s], yy[s], ww[s]),
-                         error = function(e) c(dAUC = NA, NRI = NA, IDI = NA))
+                         error = function(e) setNames(rep(NA_real_, length(nm)), nm))
   }
   out
 }
@@ -219,14 +224,17 @@ boot_metric <- function(p0, p1, yy, ww, f, rep_n = B) {
 run_pair <- function(p0, p1, yy, ww, label, old_name, note, wt) {
   cutv <- median(p1, na.rm = TRUE)   # fixed at the point estimate so the NRI
                                      # definition does not drift across replicates
-  f <- function(a, b, yv, wv) c(dAUC = auc_fun(b, yv) - auc_fun(a, yv),
+  f <- function(a, b, yv, wv) c(AUC_old = auc_fun(a, yv),
+                                AUC_new = auc_fun(b, yv),
+                                dAUC = auc_fun(b, yv) - auc_fun(a, yv),
                                 nri_idi(a, b, yv, cutv, wv))
   pt <- f(p0, p1, yy, ww)
   bs <- boot_metric(p0, p1, yy, ww, f)
   ci <- apply(bs, 2, quantile, probs = c(0.025, 0.975), na.rm = TRUE)
   data.frame(contrast = label, comparator = old_name, weighting = wt,
              n = length(yy), events = sum(yy),
-             AUC_old = auc_fun(p0, yy), AUC_new = auc_fun(p1, yy),
+             AUC_old = pt[["AUC_old"]], AUC_old_lo = ci[1, "AUC_old"], AUC_old_hi = ci[2, "AUC_old"],
+             AUC_new = pt[["AUC_new"]], AUC_new_lo = ci[1, "AUC_new"], AUC_new_hi = ci[2, "AUC_new"],
              dAUC = pt[["dAUC"]], dAUC_lo = ci[1, "dAUC"], dAUC_hi = ci[2, "dAUC"],
              NRI = pt[["NRI"]], NRI_lo = ci[1, "NRI"], NRI_hi = ci[2, "NRI"],
              IDI = pt[["IDI"]], IDI_lo = ci[1, "IDI"], IDI_hi = ci[2, "IDI"],

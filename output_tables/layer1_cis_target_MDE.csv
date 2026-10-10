@@ -1,0 +1,7 @@
+target,lipid_trait,n_iv_extracted,n_iv_harmonised,method,mean_F,min_F,OR,lci,uci,p,MDE_OR_80pct_power,MDE_OR_90pct_power,excludes_OR_above
+HMGCR,LDL,1,1,Wald ratio,372.1,372.1,0.8919,0.636,1.25,0.5068,1.62,1.748,1.62
+NPC1L1,LDL,1,1,Wald ratio,98.0,98.0,1.3618,0.79,2.348,0.2666,2.179,2.462,2.179
+PCSK9,LDL,8,7,Inverse variance weighted,165.0,21.5,1.0023,0.889,1.13,0.9704,1.187,1.22,1.187
+APOC3,TG,9,9,Inverse variance weighted,300.1,17.0,0.9106,0.798,1.038,0.1625,1.207,1.243,1.207
+LPL,TG,5,4,Inverse variance weighted,240.6,25.1,1.267,0.991,1.62,0.0594,1.421,1.502,1.421
+ANGPTL3,TG,1,1,Wald ratio,393.2,393.2,1.0645,0.712,1.592,0.761,1.778,1.946,1.778

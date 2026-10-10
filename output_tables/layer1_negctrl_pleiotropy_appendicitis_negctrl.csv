@@ -1,0 +1,7 @@
+"id.exposure","id.outcome","outcome","exposure","egger_intercept","se","pval","outcome_label"
+"N1oKCu","BzIABD","outcome","HDL",-0.00100556820495587,0.00237178660137746,0.67269727843392,"appendicitis_negctrl"
+"2D1bUs","BzIABD","outcome","ApoA1",0.000201500351806013,0.00125235912098799,0.87232876587013,"appendicitis_negctrl"
+"q4WZU7","BzIABD","outcome","ApoB",0.00313917948897299,0.00130968509112444,0.0177739304999368,"appendicitis_negctrl"
+"sDRmBR","BzIABD","outcome","TC",0.00233676186559847,0.00223578985458378,0.298946621818744,"appendicitis_negctrl"
+"x1Eh0J","BzIABD","outcome","LDL",0.00142420417124088,0.00213955798035113,0.507789477318359,"appendicitis_negctrl"
+"YD8Yoz","BzIABD","outcome","TG",0.0031807446339274,0.00264065098398192,0.233736088357044,"appendicitis_negctrl"
