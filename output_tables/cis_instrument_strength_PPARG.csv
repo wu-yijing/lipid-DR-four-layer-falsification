@@ -1,0 +1,3 @@
+"target","lipid_trait","n_iv","mean_F","min_F","max_abs_p","beta_range"
+"PPARG","TG",1,48.4,48.4,5.343e-11,"0.031 to 0.031"
+"PPARG","TC",2,49.4,22.3,2.519e-06,"0.017 to 0.032"

@@ -16,7 +16,7 @@ table stops supporting it.
 
 | class | n | meaning |
 |---|---|---|
-| `direct` | 18 | a committed script writes this exact name into `output_tables/` |
+| `direct` | 36 | a committed script writes this exact name into `output_tables/` |
 | `collected` | 46 | byte-identical to a named output of a named script (rename step made explicit) |
 | `hand-assembled` | 11 | built by hand from script outputs; values re-derived by the audit |
 | `local-only` | 8 | record-level file held locally only; listed in `.gitignore`, never committed |
@@ -73,6 +73,24 @@ screen, so each is stated explicitly.
 | file | variant | producing script / source | supports |
 |---|---|---|---|
 | `MR_exmore_sensitivity.csv` | primary | `1_mr\phase8_exmore_sensitivity.py` | Section 3.1 / Supplementary Table S12 |
+| `cis_drug_target_MR_PPARG.csv` | primary | `2_cis_mr\phase18_pparg_cis_mr.R` |  |
+| `cis_instrument_strength_PPARG.csv` | primary | `2_cis_mr\phase18_pparg_cis_mr.R` |  |
+| `cis_pparg_correlated_ivw.csv` | primary | `2_cis_mr\phase18_pparg_cis_mr.R` |  |
+| `cis_pparg_per_instrument_wald.csv` | primary | `2_cis_mr\phase18_pparg_cis_mr.R` |  |
+| `layer1_MDE_by_exposure.csv` | primary | `1_mr\phase12_power_mde.py` |  |
+| `layer1_cis_target_MDE.csv` | primary | `2_cis_mr\phase13_cis_MDE.py` |  |
+| `layer1_cis_target_MDE_PPARG.csv` | primary | `2_cis_mr\phase18_pparg_cis_mr.R` |  |
+| `layer1_external_appendicitis_negctrl.csv` | primary | `4_external\phase15_external_outcome_mr.R` |  |
+| `layer1_external_height_negctrl.csv` | primary | `4_external\phase15_external_outcome_mr.R` |  |
+| `layer1_external_ukb_dr_replication.csv` | primary | `4_external\phase15_external_outcome_mr.R` |  |
+| `layer1_instrument_detail_F_R2.csv` | primary | `1_mr\phase12_power_mde.py` |  |
+| `layer1_instrument_strength_by_exposure.csv` | primary | `1_mr\phase12_power_mde.py` |  |
+| `layer1_negctrl_estimates_appendicitis_negctrl.csv` | primary | `4_external\phase17_negctrl_diagnostics.R` |  |
+| `layer1_negctrl_heterogeneity_appendicitis_negctrl.csv` | primary | `4_external\phase17_negctrl_diagnostics.R` |  |
+| `layer1_negctrl_ivw_fe_re_appendicitis_negctrl.csv` | primary | `4_external\phase17_negctrl_diagnostics.R` |  |
+| `layer1_negctrl_pleiotropy_appendicitis_negctrl.csv` | primary | `4_external\phase17_negctrl_diagnostics.R` |  |
+| `layer1_robust_estimators.csv` | primary | `1_mr\phase14_robust_estimators.R` |  |
+| `layer1_winners_curse_threshold_sensitivity.csv` | primary | `1_mr\phase12_power_mde.py` |  |
 | `layer2_design_condition_numbers.csv` | primary | `3_prediction/phase10_reporting_gaps.py` | Section 3.2 - basis of the condition number |
 | `layer2_independent_reextraction_summary.csv` | primary | `3_prediction\phase9_independent_reextraction.py` | Supplementary Table S14a |
 | `layer2_missingness_patterns.csv` | primary | `3_prediction\phase8_review_revision_analyses.py` | Supplementary Table S10 |

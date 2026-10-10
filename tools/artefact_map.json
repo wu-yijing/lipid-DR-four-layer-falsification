@@ -1,555 +1,681 @@
 {
- "MR_Egger_intercepts.csv": {
-  "committed": "MR_Egger_intercepts.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase1_out\\mr_egger_intercept.csv"
-  ]
- },
- "MR_PRESSO_10k_summary.csv": {
-  "committed": "MR_PRESSO_10k_summary.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase1_out\\presso10k_summary.csv"
-  ]
- },
- "MR_exmore_sensitivity.csv": {
-  "committed": "MR_exmore_sensitivity.csv",
-  "written_by": [
-   "1_mr\\phase8_exmore_sensitivity.py"
-  ],
-  "provenance": "direct"
- },
- "MR_heterogeneity_CochranQ.csv": {
-  "committed": "MR_heterogeneity_CochranQ.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase1_out\\mr_heterogeneity.csv"
-  ]
- },
- "MR_two_sample_all_methods.csv": {
-  "committed": "MR_two_sample_all_methods.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase1_out\\mr_main.csv"
-  ]
- },
- "MVMR_core_TG_LDL_HDL.csv": {
-  "committed": "MVMR_core_TG_LDL_HDL.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase1_out\\mvmr_core_TG_LDL_HDL.csv"
-  ]
- },
- "cis_drug_target_MR_six_targets.csv": {
-  "committed": "cis_drug_target_MR_six_targets.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase1_out\\druggable_mr_results.csv"
-  ]
- },
- "cis_instrument_strength_by_target.csv": {
-  "committed": "cis_instrument_strength_by_target.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase2_out\\phase2f_cis_strength.csv"
-  ]
- },
- "cis_marginal_F_TG_LDL_HDL.csv": {
-  "committed": "cis_marginal_F_TG_LDL_HDL.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase2_out\\phase2f_marginal_f.csv"
-  ]
- },
- "emerging_markers_NHANES.csv": {
-  "committed": "emerging_markers_NHANES.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase4_out\\phase4c_nhanes_rc_tyg.csv",
-   "<SRC>\\phase4_out_v2\\phase4c_nhanes_rc_tyg.csv"
-  ]
- },
- "emerging_markers_chinese_cohort.csv": {
-  "committed": "emerging_markers_chinese_cohort.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase4_out_v2\\phase4c_chinese_rc.csv"
-  ]
- },
- "instrument_mean_F_by_exposure.csv": {
-  "committed": "instrument_mean_F_by_exposure.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase1_out\\iv_mean_fstat.csv"
-  ]
- },
- "layer2_MI_pooled_coefficients_3seeds.csv": {
-  "committed": "layer2_MI_pooled_coefficients_3seeds.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase2_out\\phase_v2_mi_coef.csv"
-  ]
- },
- "layer2_cohort_repeat_screening.csv": {
-  "committed": "layer2_cohort_repeat_screening.csv",
-  "provenance": "hand-assembled"
- },
- "layer2_complete_case_coefficients_VIF.csv": {
-  "committed": "layer2_complete_case_coefficients_VIF.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase2_out\\phase_v2_cc_model.csv"
-  ]
- },
- "layer2_complete_case_performance.csv": {
-  "committed": "layer2_complete_case_performance.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase2_out_v2\\phase2_performance.csv"
-  ]
- },
- "layer2_dedup_cohort_and_outcome.csv": {
-  "committed": "layer2_dedup_cohort_and_outcome.csv",
-  "provenance": "hand-assembled"
- },
- "layer2_dedup_complete_case_coefficients_VIF.csv": {
-  "committed": "layer2_dedup_complete_case_coefficients_VIF.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase2_out_v2d\\phase_v2d_cc_model.csv"
-  ]
- },
- "layer2_dedup_complete_case_performance.csv": {
-  "committed": "layer2_dedup_complete_case_performance.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase2_out_v2d\\phase2_performance.csv"
-  ]
- },
- "layer2_dedup_delta_auc_bootstrap.csv": {
-  "committed": "layer2_dedup_delta_auc_bootstrap.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase2_out_v2d\\phase_v2d_deltaauc.csv"
-  ]
- },
- "layer2_dedup_discrimination_and_missingness.csv": {
-  "committed": "layer2_dedup_discrimination_and_missingness.csv",
-  "provenance": "hand-assembled"
- },
- "layer2_dedup_missingness_rates.csv": {
-  "committed": "layer2_dedup_missingness_rates.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase2_out_v2d\\phase_v2d_missing_rates.csv"
-  ]
- },
- "layer2_dedup_pmsampsize_grid.csv": {
-  "committed": "layer2_dedup_pmsampsize_grid.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase2_out_v2d\\phase_v2d_pmsampsize.csv"
-  ]
- },
- "layer2_dedup_screening_selection_rule.csv": {
-  "committed": "layer2_dedup_screening_selection_rule.csv",
-  "provenance": "hand-assembled"
- },
- "layer2_dedup_selection_model.csv": {
-  "committed": "layer2_dedup_selection_model.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase2_out_v2d\\phase_v2d_selection_model.csv"
-  ]
- },
- "layer2_dedup_three_row_AUC_decomposition.csv": {
-  "committed": "layer2_dedup_three_row_AUC_decomposition.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase2_out_v2d\\phase_v2d_decomposition.csv"
-  ]
- },
- "layer2_delta_auc_bootstrap.csv": {
-  "committed": "layer2_delta_auc_bootstrap.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase2_out\\phase_v2_deltaauc.csv"
-  ]
- },
- "layer2_fraction_missing_information.csv": {
-  "committed": "layer2_fraction_missing_information.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase7_out_v2\\imp_fmi.csv"
-  ]
- },
- "layer2_imputation_observed_vs_imputed.csv": {
-  "committed": "layer2_imputation_observed_vs_imputed.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase7_out_v2\\imp_diag_stats.csv"
-  ]
- },
- "layer2_independent_reextraction_summary.csv": {
-  "committed": "layer2_independent_reextraction_summary.csv",
-  "written_by": [
-   "3_prediction\\phase9_independent_reextraction.py"
-  ],
-  "provenance": "direct"
- },
- "layer2_missingness_mechanism.csv": {
-  "committed": "layer2_missingness_mechanism.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase7_out_v2\\missing_assoc_or.csv"
-  ]
- },
- "layer2_missingness_patterns.csv": {
-  "committed": "layer2_missingness_patterns.csv",
-  "written_by": [
-   "3_prediction\\phase8_review_revision_analyses.py"
-  ],
-  "provenance": "direct"
- },
- "layer2_missingness_rates.csv": {
-  "committed": "layer2_missingness_rates.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase2_out\\phase_v2_missing_rates.csv",
-   "<SRC>\\phase7_out_v2\\missing_rates.csv"
-  ]
- },
- "layer2_outcome_audit_and_bounds.csv": {
-  "committed": "layer2_outcome_audit_and_bounds.csv",
-  "written_by": [
-   "3_prediction\\phase8b_outcome_error_bounds.py"
-  ],
-  "provenance": "direct"
- },
- "layer2_outcome_crosstab_full.csv": {
-  "committed": "layer2_outcome_crosstab_full.csv",
-  "written_by": [
-   "3_prediction\\phase8_review_revision_analyses.py"
-  ],
-  "provenance": "direct"
- },
- "layer2_outcome_rebuild_crosstab.csv": {
-  "committed": "layer2_outcome_rebuild_crosstab.csv",
-  "provenance": "hand-assembled"
- },
- "layer2_outcome_rebuild_exclusions.csv": {
-  "committed": "layer2_outcome_rebuild_exclusions.csv",
-  "provenance": "hand-assembled"
- },
- "layer2_outcome_rebuild_eye_categories.csv": {
-  "committed": "layer2_outcome_rebuild_eye_categories.csv",
-  "provenance": "hand-assembled"
- },
- "layer2_outcome_rebuild_patient_grades.csv": {
-  "committed": "layer2_outcome_rebuild_patient_grades.csv",
-  "provenance": "hand-assembled"
- },
- "layer2_parsimonious_models.csv": {
-  "committed": "layer2_parsimonious_models.csv",
-  "written_by": [
-   "3_prediction\\phase8_review_revision_analyses.py"
-  ],
-  "provenance": "direct"
- },
- "layer2_pmsampsize_grid.csv": {
-  "committed": "layer2_pmsampsize_grid.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase2_out\\phase_v2_pmsampsize.csv"
-  ]
- },
- "layer2_pmsampsize_grid_fine.csv": {
-  "committed": "layer2_pmsampsize_grid_fine.csv",
-  "provenance": "hand-assembled"
- },
- "layer2_selection_model.csv": {
-  "committed": "layer2_selection_model.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase2_out\\phase_v2_selection_model.csv"
-  ]
- },
- "layer2_severity_coding_table.csv": {
-  "committed": "layer2_severity_coding_table.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase2_out\\phase2f_severity_table.csv"
-  ]
- },
- "layer2_text_mode_5level_matrix_r2r3_adj.csv": {
-  "committed": "layer2_text_mode_5level_matrix_r2r3_adj.csv",
-  "provenance": "hand-assembled"
- },
- "layer2_three_row_AUC_decomposition.csv": {
-  "committed": "layer2_three_row_AUC_decomposition.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase2_out\\phase_v2_decomposition.csv"
-  ]
- },
- "layer34_dedup_transport_and_benchmark.csv": {
-  "committed": "layer34_dedup_transport_and_benchmark.csv",
-  "provenance": "hand-assembled"
- },
- "layer3_MI_pooled_export_sensitivity.csv": {
-  "committed": "layer3_MI_pooled_export_sensitivity.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase4_out_v2\\phase4d_mi_export.csv"
-  ]
- },
- "layer3_chinese_coefficients_by_cycle.csv": {
-  "committed": "layer3_chinese_coefficients_by_cycle.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase4_out\\v2_phase4b_chinese_by_cycle.csv"
-  ]
- },
- "layer3_dedup_external_validation_AUC.csv": {
-  "committed": "layer3_dedup_external_validation_AUC.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase4_out_v2d\\phase4_external_auc.csv"
-  ]
- },
- "layer3_dedup_weighted_sensitivity_MEC.csv": {
-  "committed": "layer3_dedup_weighted_sensitivity_MEC.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase7_out_v2d\\v2d_phase7h_weighted_ext.csv"
-  ]
- },
- "layer3_external_validation_AUC.csv": {
-  "committed": "layer3_external_validation_AUC.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase4_out_v2\\phase4_external_auc.csv"
-  ]
- },
- "layer3_recomputed_AUC_CI_B2000.csv": {
-  "committed": "layer3_recomputed_AUC_CI_B2000.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase4_out_v2\\phase4e_auc_ci.csv"
-  ]
- },
- "layer3_weighted_sensitivity_MEC.csv": {
-  "committed": "layer3_weighted_sensitivity_MEC.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase7_out\\v2_phase7h_weighted_ext.csv"
-  ]
- },
- "layer4_dedup_three_row_AUC.csv": {
-  "committed": "layer4_dedup_three_row_AUC.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase4_out_v2d\\phase4e_three_row.csv"
-  ]
- },
- "layer4_dedup_weighted_calibration.csv": {
-  "committed": "layer4_dedup_weighted_calibration.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase7_out_v2d\\v2d_phase7h_calib_weighted.csv"
-  ]
- },
- "layer4_dedup_weighted_full_vs_lipid.csv": {
-  "committed": "layer4_dedup_weighted_full_vs_lipid.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase7_out_v2d\\v2d_phase7h_full_vs_lipid_weighted.csv"
-  ]
- },
- "layer4_full_reference_model.csv": {
-  "committed": "layer4_full_reference_model.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase4_out\\phase4_reference_model.csv",
-   "<SRC>\\phase4_out_v2\\phase4_reference_model.csv",
-   "<SRC>\\phase4_out_v2d\\phase4_reference_model.csv"
-  ]
- },
- "layer4_increment_NRI_IDI.csv": {
-  "committed": "layer4_increment_NRI_IDI.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase4_out_v2\\phase4_increment.csv"
-  ]
- },
- "layer4_temporal_validation.csv": {
-  "committed": "layer4_temporal_validation.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase4_out\\phase4b_temporal.csv",
-   "<SRC>\\phase4_out\\v2_phase4b_temporal.csv"
-  ]
- },
- "layer4_three_row_AUC.csv": {
-  "committed": "layer4_three_row_AUC.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase4_out_v2\\phase4e_three_row.csv"
-  ]
- },
- "layer4_weighted_calibration.csv": {
-  "committed": "layer4_weighted_calibration.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase7_out\\v2_phase7h_calib_weighted.csv"
-  ]
- },
- "layer4_weighted_full_vs_lipid.csv": {
-  "committed": "layer4_weighted_full_vs_lipid.csv",
-  "provenance": "collected",
-  "sources": [
-   "<SRC>\\phase7_out\\v2_phase7h_full_vs_lipid_weighted.csv"
-  ]
- },
- "layer2_second_grader_sampling_summary.json": {
-  "committed": "layer2_second_grader_sampling_summary.json",
-  "written_by": [
-   "3_prediction/phase9b_second_grader_sampling.py"
-  ],
-  "provenance": "direct"
- },
- "layer2_text_mode_agreement_r2r3_adj.json": {
-  "committed": "layer2_text_mode_agreement_r2r3_adj.json",
-  "written_by": [
-   "3_prediction/phase9c_text_mode.py"
-  ],
-  "provenance": "direct"
- },
- "layer2_independent_reextraction.csv": {
-  "committed": "layer2_independent_reextraction.csv",
-  "provenance": "local-only",
-  "written_by": [
-   "3_prediction/phase9_independent_reextraction.py"
-  ]
- },
- "layer2_independent_reextraction_discordances.csv": {
-  "committed": "layer2_independent_reextraction_discordances.csv",
-  "provenance": "local-only",
-  "written_by": [
-   "3_prediction/phase9_independent_reextraction.py"
-  ]
- },
- "layer2_independent_reextraction_discordances_preadjudication.csv": {
-  "committed": "layer2_independent_reextraction_discordances_preadjudication.csv",
-  "provenance": "local-only",
-  "written_by": [
-   "3_prediction/phase9_independent_reextraction.py"
-  ]
- },
- "layer2_second_grader_sampling.csv": {
-  "committed": "layer2_second_grader_sampling.csv",
-  "provenance": "local-only",
-  "written_by": [
-   "3_prediction/phase9b_second_grader_sampling.py"
-  ]
- },
- "layer2_text_mode_5level_matrix__selftest_returnedxlsx.csv": {
-  "committed": "layer2_text_mode_5level_matrix__selftest_returnedxlsx.csv",
-  "provenance": "local-only",
-  "written_by": [
-   "3_prediction/phase9c_text_mode.py"
-  ]
- },
- "layer2_text_mode_agreement__selftest_returnedxlsx.json": {
-  "committed": "layer2_text_mode_agreement__selftest_returnedxlsx.json",
-  "provenance": "local-only",
-  "written_by": [
-   "3_prediction/phase9c_text_mode.py"
-  ]
- },
- "layer2_text_mode_discordances.csv": {
-  "committed": "layer2_text_mode_discordances.csv",
-  "provenance": "local-only",
-  "written_by": [
-   "3_prediction/phase9c_text_mode.py"
-  ]
- },
- "layer2_text_mode_practice_key.csv": {
-  "committed": "layer2_text_mode_practice_key.csv",
-  "provenance": "local-only",
-  "written_by": [
-   "3_prediction/phase9c_text_mode.py"
-  ]
- },
- "layer2_reporting_gaps.csv": {
-  "committed": "layer2_reporting_gaps.csv",
-  "written_by": [
-   "3_prediction/phase10_reporting_gaps.py"
-  ],
-  "provenance": "direct"
- },
- "layer2_design_condition_numbers.csv": {
-  "committed": "layer2_design_condition_numbers.csv",
-  "written_by": [
-   "3_prediction/phase10_reporting_gaps.py"
-  ],
-  "provenance": "direct"
- },
- "layer2_parsimonious_markers_classified.csv": {
-  "committed": "layer2_parsimonious_markers_classified.csv",
-  "written_by": [
-   "3_prediction/phase10_reporting_gaps.py"
-  ],
-  "provenance": "direct"
- },
- "layer2_second_grader_composition.csv": {
-  "committed": "layer2_second_grader_composition.csv",
-  "written_by": [
-   "3_prediction/phase10_reporting_gaps.py"
-  ],
-  "provenance": "direct"
- },
- "layer2_pmsampsize_verification.csv": {
-  "committed": "layer2_pmsampsize_verification.csv",
-  "written_by": [
-   "3_prediction/phase10_reporting_gaps.py"
-  ],
-  "provenance": "direct"
- },
- "layer2_reporting_gap_inventory.csv": {
-  "committed": "layer2_reporting_gap_inventory.csv",
-  "written_by": [
-   "3_prediction/phase10_reporting_gaps.py"
-  ],
-  "provenance": "direct"
- },
- "layer4_lipid_increment_negative_control.csv": {
-  "committed": "layer4_lipid_increment_negative_control.csv",
-  "written_by": [
-   "4_external/phase11_lipid_increment_over_full_model.R"
-  ],
-  "provenance": "direct"
- },
- "layer4_lipid_increment_over_full_model.csv": {
-  "committed": "layer4_lipid_increment_over_full_model.csv",
-  "written_by": [
-   "4_external/phase11_lipid_increment_over_full_model.R"
-  ],
-  "provenance": "direct"
- },
- "layer4_local_comparator_increment.csv": {
-  "committed": "layer4_local_comparator_increment.csv",
-  "written_by": [
-   "4_external/phase10_local_comparator_increment.R"
-  ],
-  "provenance": "direct"
- },
- "layer4_three_row_AUC_corrected.csv": {
-  "committed": "layer4_three_row_AUC_corrected.csv",
-  "written_by": [
-   "4_external/phase10_local_comparator_increment.R"
-  ],
-  "provenance": "direct"
- }
+  "MR_Egger_intercepts.csv": {
+    "committed": "MR_Egger_intercepts.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase1_out\\mr_egger_intercept.csv"
+    ]
+  },
+  "MR_PRESSO_10k_summary.csv": {
+    "committed": "MR_PRESSO_10k_summary.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase1_out\\presso10k_summary.csv"
+    ]
+  },
+  "MR_exmore_sensitivity.csv": {
+    "committed": "MR_exmore_sensitivity.csv",
+    "written_by": [
+      "1_mr\\phase8_exmore_sensitivity.py"
+    ],
+    "provenance": "direct"
+  },
+  "MR_heterogeneity_CochranQ.csv": {
+    "committed": "MR_heterogeneity_CochranQ.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase1_out\\mr_heterogeneity.csv"
+    ]
+  },
+  "MR_two_sample_all_methods.csv": {
+    "committed": "MR_two_sample_all_methods.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase1_out\\mr_main.csv"
+    ]
+  },
+  "MVMR_core_TG_LDL_HDL.csv": {
+    "committed": "MVMR_core_TG_LDL_HDL.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase1_out\\mvmr_core_TG_LDL_HDL.csv"
+    ]
+  },
+  "cis_drug_target_MR_PPARG.csv": {
+    "committed": "cis_drug_target_MR_PPARG.csv",
+    "written_by": [
+      "2_cis_mr\\phase18_pparg_cis_mr.R"
+    ],
+    "provenance": "direct"
+  },
+  "cis_drug_target_MR_six_targets.csv": {
+    "committed": "cis_drug_target_MR_six_targets.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase1_out\\druggable_mr_results.csv"
+    ]
+  },
+  "cis_instrument_strength_PPARG.csv": {
+    "committed": "cis_instrument_strength_PPARG.csv",
+    "written_by": [
+      "2_cis_mr\\phase18_pparg_cis_mr.R"
+    ],
+    "provenance": "direct"
+  },
+  "cis_instrument_strength_by_target.csv": {
+    "committed": "cis_instrument_strength_by_target.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase2_out\\phase2f_cis_strength.csv"
+    ]
+  },
+  "cis_marginal_F_TG_LDL_HDL.csv": {
+    "committed": "cis_marginal_F_TG_LDL_HDL.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase2_out\\phase2f_marginal_f.csv"
+    ]
+  },
+  "cis_pparg_correlated_ivw.csv": {
+    "committed": "cis_pparg_correlated_ivw.csv",
+    "written_by": [
+      "2_cis_mr\\phase18_pparg_cis_mr.R"
+    ],
+    "provenance": "direct"
+  },
+  "cis_pparg_per_instrument_wald.csv": {
+    "committed": "cis_pparg_per_instrument_wald.csv",
+    "written_by": [
+      "2_cis_mr\\phase18_pparg_cis_mr.R"
+    ],
+    "provenance": "direct"
+  },
+  "emerging_markers_NHANES.csv": {
+    "committed": "emerging_markers_NHANES.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase4_out\\phase4c_nhanes_rc_tyg.csv",
+      "<SRC>\\phase4_out_v2\\phase4c_nhanes_rc_tyg.csv"
+    ]
+  },
+  "emerging_markers_chinese_cohort.csv": {
+    "committed": "emerging_markers_chinese_cohort.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase4_out_v2\\phase4c_chinese_rc.csv"
+    ]
+  },
+  "instrument_mean_F_by_exposure.csv": {
+    "committed": "instrument_mean_F_by_exposure.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase1_out\\iv_mean_fstat.csv"
+    ]
+  },
+  "layer1_MDE_by_exposure.csv": {
+    "committed": "layer1_MDE_by_exposure.csv",
+    "written_by": [
+      "1_mr\\phase12_power_mde.py"
+    ],
+    "provenance": "direct"
+  },
+  "layer1_cis_target_MDE.csv": {
+    "committed": "layer1_cis_target_MDE.csv",
+    "written_by": [
+      "2_cis_mr\\phase13_cis_MDE.py"
+    ],
+    "provenance": "direct"
+  },
+  "layer1_cis_target_MDE_PPARG.csv": {
+    "committed": "layer1_cis_target_MDE_PPARG.csv",
+    "written_by": [
+      "2_cis_mr\\phase18_pparg_cis_mr.R"
+    ],
+    "provenance": "direct"
+  },
+  "layer1_external_appendicitis_negctrl.csv": {
+    "committed": "layer1_external_appendicitis_negctrl.csv",
+    "written_by": [
+      "4_external\\phase15_external_outcome_mr.R"
+    ],
+    "provenance": "direct"
+  },
+  "layer1_external_height_negctrl.csv": {
+    "committed": "layer1_external_height_negctrl.csv",
+    "written_by": [
+      "4_external\\phase15_external_outcome_mr.R"
+    ],
+    "provenance": "direct"
+  },
+  "layer1_external_ukb_dr_replication.csv": {
+    "committed": "layer1_external_ukb_dr_replication.csv",
+    "written_by": [
+      "4_external\\phase15_external_outcome_mr.R"
+    ],
+    "provenance": "direct"
+  },
+  "layer1_instrument_detail_F_R2.csv": {
+    "committed": "layer1_instrument_detail_F_R2.csv",
+    "written_by": [
+      "1_mr\\phase12_power_mde.py"
+    ],
+    "provenance": "direct"
+  },
+  "layer1_instrument_strength_by_exposure.csv": {
+    "committed": "layer1_instrument_strength_by_exposure.csv",
+    "written_by": [
+      "1_mr\\phase12_power_mde.py"
+    ],
+    "provenance": "direct"
+  },
+  "layer1_negctrl_estimates_appendicitis_negctrl.csv": {
+    "committed": "layer1_negctrl_estimates_appendicitis_negctrl.csv",
+    "written_by": [
+      "4_external\\phase17_negctrl_diagnostics.R"
+    ],
+    "provenance": "direct"
+  },
+  "layer1_negctrl_heterogeneity_appendicitis_negctrl.csv": {
+    "committed": "layer1_negctrl_heterogeneity_appendicitis_negctrl.csv",
+    "written_by": [
+      "4_external\\phase17_negctrl_diagnostics.R"
+    ],
+    "provenance": "direct"
+  },
+  "layer1_negctrl_ivw_fe_re_appendicitis_negctrl.csv": {
+    "committed": "layer1_negctrl_ivw_fe_re_appendicitis_negctrl.csv",
+    "written_by": [
+      "4_external\\phase17_negctrl_diagnostics.R"
+    ],
+    "provenance": "direct"
+  },
+  "layer1_negctrl_pleiotropy_appendicitis_negctrl.csv": {
+    "committed": "layer1_negctrl_pleiotropy_appendicitis_negctrl.csv",
+    "written_by": [
+      "4_external\\phase17_negctrl_diagnostics.R"
+    ],
+    "provenance": "direct"
+  },
+  "layer1_robust_estimators.csv": {
+    "committed": "layer1_robust_estimators.csv",
+    "written_by": [
+      "1_mr\\phase14_robust_estimators.R"
+    ],
+    "provenance": "direct"
+  },
+  "layer1_winners_curse_threshold_sensitivity.csv": {
+    "committed": "layer1_winners_curse_threshold_sensitivity.csv",
+    "written_by": [
+      "1_mr\\phase12_power_mde.py"
+    ],
+    "provenance": "direct"
+  },
+  "layer2_MI_pooled_coefficients_3seeds.csv": {
+    "committed": "layer2_MI_pooled_coefficients_3seeds.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase2_out\\phase_v2_mi_coef.csv"
+    ]
+  },
+  "layer2_cohort_repeat_screening.csv": {
+    "committed": "layer2_cohort_repeat_screening.csv",
+    "provenance": "hand-assembled"
+  },
+  "layer2_complete_case_coefficients_VIF.csv": {
+    "committed": "layer2_complete_case_coefficients_VIF.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase2_out\\phase_v2_cc_model.csv"
+    ]
+  },
+  "layer2_complete_case_performance.csv": {
+    "committed": "layer2_complete_case_performance.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase2_out_v2\\phase2_performance.csv"
+    ]
+  },
+  "layer2_dedup_cohort_and_outcome.csv": {
+    "committed": "layer2_dedup_cohort_and_outcome.csv",
+    "provenance": "hand-assembled"
+  },
+  "layer2_dedup_complete_case_coefficients_VIF.csv": {
+    "committed": "layer2_dedup_complete_case_coefficients_VIF.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase2_out_v2d\\phase_v2d_cc_model.csv"
+    ]
+  },
+  "layer2_dedup_complete_case_performance.csv": {
+    "committed": "layer2_dedup_complete_case_performance.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase2_out_v2d\\phase2_performance.csv"
+    ]
+  },
+  "layer2_dedup_delta_auc_bootstrap.csv": {
+    "committed": "layer2_dedup_delta_auc_bootstrap.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase2_out_v2d\\phase_v2d_deltaauc.csv"
+    ]
+  },
+  "layer2_dedup_discrimination_and_missingness.csv": {
+    "committed": "layer2_dedup_discrimination_and_missingness.csv",
+    "provenance": "hand-assembled"
+  },
+  "layer2_dedup_missingness_rates.csv": {
+    "committed": "layer2_dedup_missingness_rates.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase2_out_v2d\\phase_v2d_missing_rates.csv"
+    ]
+  },
+  "layer2_dedup_pmsampsize_grid.csv": {
+    "committed": "layer2_dedup_pmsampsize_grid.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase2_out_v2d\\phase_v2d_pmsampsize.csv"
+    ]
+  },
+  "layer2_dedup_screening_selection_rule.csv": {
+    "committed": "layer2_dedup_screening_selection_rule.csv",
+    "provenance": "hand-assembled"
+  },
+  "layer2_dedup_selection_model.csv": {
+    "committed": "layer2_dedup_selection_model.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase2_out_v2d\\phase_v2d_selection_model.csv"
+    ]
+  },
+  "layer2_dedup_three_row_AUC_decomposition.csv": {
+    "committed": "layer2_dedup_three_row_AUC_decomposition.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase2_out_v2d\\phase_v2d_decomposition.csv"
+    ]
+  },
+  "layer2_delta_auc_bootstrap.csv": {
+    "committed": "layer2_delta_auc_bootstrap.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase2_out\\phase_v2_deltaauc.csv"
+    ]
+  },
+  "layer2_design_condition_numbers.csv": {
+    "committed": "layer2_design_condition_numbers.csv",
+    "written_by": [
+      "3_prediction/phase10_reporting_gaps.py"
+    ],
+    "provenance": "direct"
+  },
+  "layer2_fraction_missing_information.csv": {
+    "committed": "layer2_fraction_missing_information.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase7_out_v2\\imp_fmi.csv"
+    ]
+  },
+  "layer2_imputation_observed_vs_imputed.csv": {
+    "committed": "layer2_imputation_observed_vs_imputed.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase7_out_v2\\imp_diag_stats.csv"
+    ]
+  },
+  "layer2_independent_reextraction.csv": {
+    "committed": "layer2_independent_reextraction.csv",
+    "provenance": "local-only",
+    "written_by": [
+      "3_prediction/phase9_independent_reextraction.py"
+    ]
+  },
+  "layer2_independent_reextraction_discordances.csv": {
+    "committed": "layer2_independent_reextraction_discordances.csv",
+    "provenance": "local-only",
+    "written_by": [
+      "3_prediction/phase9_independent_reextraction.py"
+    ]
+  },
+  "layer2_independent_reextraction_discordances_preadjudication.csv": {
+    "committed": "layer2_independent_reextraction_discordances_preadjudication.csv",
+    "provenance": "local-only",
+    "written_by": [
+      "3_prediction/phase9_independent_reextraction.py"
+    ]
+  },
+  "layer2_independent_reextraction_summary.csv": {
+    "committed": "layer2_independent_reextraction_summary.csv",
+    "written_by": [
+      "3_prediction\\phase9_independent_reextraction.py"
+    ],
+    "provenance": "direct"
+  },
+  "layer2_missingness_mechanism.csv": {
+    "committed": "layer2_missingness_mechanism.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase7_out_v2\\missing_assoc_or.csv"
+    ]
+  },
+  "layer2_missingness_patterns.csv": {
+    "committed": "layer2_missingness_patterns.csv",
+    "written_by": [
+      "3_prediction\\phase8_review_revision_analyses.py"
+    ],
+    "provenance": "direct"
+  },
+  "layer2_missingness_rates.csv": {
+    "committed": "layer2_missingness_rates.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase2_out\\phase_v2_missing_rates.csv",
+      "<SRC>\\phase7_out_v2\\missing_rates.csv"
+    ]
+  },
+  "layer2_outcome_audit_and_bounds.csv": {
+    "committed": "layer2_outcome_audit_and_bounds.csv",
+    "written_by": [
+      "3_prediction\\phase8b_outcome_error_bounds.py"
+    ],
+    "provenance": "direct"
+  },
+  "layer2_outcome_crosstab_full.csv": {
+    "committed": "layer2_outcome_crosstab_full.csv",
+    "written_by": [
+      "3_prediction\\phase8_review_revision_analyses.py"
+    ],
+    "provenance": "direct"
+  },
+  "layer2_outcome_rebuild_crosstab.csv": {
+    "committed": "layer2_outcome_rebuild_crosstab.csv",
+    "provenance": "hand-assembled"
+  },
+  "layer2_outcome_rebuild_exclusions.csv": {
+    "committed": "layer2_outcome_rebuild_exclusions.csv",
+    "provenance": "hand-assembled"
+  },
+  "layer2_outcome_rebuild_eye_categories.csv": {
+    "committed": "layer2_outcome_rebuild_eye_categories.csv",
+    "provenance": "hand-assembled"
+  },
+  "layer2_outcome_rebuild_patient_grades.csv": {
+    "committed": "layer2_outcome_rebuild_patient_grades.csv",
+    "provenance": "hand-assembled"
+  },
+  "layer2_parsimonious_markers_classified.csv": {
+    "committed": "layer2_parsimonious_markers_classified.csv",
+    "written_by": [
+      "3_prediction/phase10_reporting_gaps.py"
+    ],
+    "provenance": "direct"
+  },
+  "layer2_parsimonious_models.csv": {
+    "committed": "layer2_parsimonious_models.csv",
+    "written_by": [
+      "3_prediction\\phase8_review_revision_analyses.py"
+    ],
+    "provenance": "direct"
+  },
+  "layer2_pmsampsize_grid.csv": {
+    "committed": "layer2_pmsampsize_grid.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase2_out\\phase_v2_pmsampsize.csv"
+    ]
+  },
+  "layer2_pmsampsize_grid_fine.csv": {
+    "committed": "layer2_pmsampsize_grid_fine.csv",
+    "provenance": "hand-assembled"
+  },
+  "layer2_pmsampsize_verification.csv": {
+    "committed": "layer2_pmsampsize_verification.csv",
+    "written_by": [
+      "3_prediction/phase10_reporting_gaps.py"
+    ],
+    "provenance": "direct"
+  },
+  "layer2_reporting_gap_inventory.csv": {
+    "committed": "layer2_reporting_gap_inventory.csv",
+    "written_by": [
+      "3_prediction/phase10_reporting_gaps.py"
+    ],
+    "provenance": "direct"
+  },
+  "layer2_reporting_gaps.csv": {
+    "committed": "layer2_reporting_gaps.csv",
+    "written_by": [
+      "3_prediction/phase10_reporting_gaps.py"
+    ],
+    "provenance": "direct"
+  },
+  "layer2_second_grader_composition.csv": {
+    "committed": "layer2_second_grader_composition.csv",
+    "written_by": [
+      "3_prediction/phase10_reporting_gaps.py"
+    ],
+    "provenance": "direct"
+  },
+  "layer2_second_grader_sampling.csv": {
+    "committed": "layer2_second_grader_sampling.csv",
+    "provenance": "local-only",
+    "written_by": [
+      "3_prediction/phase9b_second_grader_sampling.py"
+    ]
+  },
+  "layer2_second_grader_sampling_summary.json": {
+    "committed": "layer2_second_grader_sampling_summary.json",
+    "written_by": [
+      "3_prediction/phase9b_second_grader_sampling.py"
+    ],
+    "provenance": "direct"
+  },
+  "layer2_selection_model.csv": {
+    "committed": "layer2_selection_model.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase2_out\\phase_v2_selection_model.csv"
+    ]
+  },
+  "layer2_severity_coding_table.csv": {
+    "committed": "layer2_severity_coding_table.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase2_out\\phase2f_severity_table.csv"
+    ]
+  },
+  "layer2_text_mode_5level_matrix__selftest_returnedxlsx.csv": {
+    "committed": "layer2_text_mode_5level_matrix__selftest_returnedxlsx.csv",
+    "provenance": "local-only",
+    "written_by": [
+      "3_prediction/phase9c_text_mode.py"
+    ]
+  },
+  "layer2_text_mode_5level_matrix_r2r3_adj.csv": {
+    "committed": "layer2_text_mode_5level_matrix_r2r3_adj.csv",
+    "provenance": "hand-assembled"
+  },
+  "layer2_text_mode_agreement__selftest_returnedxlsx.json": {
+    "committed": "layer2_text_mode_agreement__selftest_returnedxlsx.json",
+    "provenance": "local-only",
+    "written_by": [
+      "3_prediction/phase9c_text_mode.py"
+    ]
+  },
+  "layer2_text_mode_agreement_r2r3_adj.json": {
+    "committed": "layer2_text_mode_agreement_r2r3_adj.json",
+    "written_by": [
+      "3_prediction/phase9c_text_mode.py"
+    ],
+    "provenance": "direct"
+  },
+  "layer2_text_mode_discordances.csv": {
+    "committed": "layer2_text_mode_discordances.csv",
+    "provenance": "local-only",
+    "written_by": [
+      "3_prediction/phase9c_text_mode.py"
+    ]
+  },
+  "layer2_text_mode_practice_key.csv": {
+    "committed": "layer2_text_mode_practice_key.csv",
+    "provenance": "local-only",
+    "written_by": [
+      "3_prediction/phase9c_text_mode.py"
+    ]
+  },
+  "layer2_three_row_AUC_decomposition.csv": {
+    "committed": "layer2_three_row_AUC_decomposition.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase2_out\\phase_v2_decomposition.csv"
+    ]
+  },
+  "layer34_dedup_transport_and_benchmark.csv": {
+    "committed": "layer34_dedup_transport_and_benchmark.csv",
+    "provenance": "hand-assembled"
+  },
+  "layer3_MI_pooled_export_sensitivity.csv": {
+    "committed": "layer3_MI_pooled_export_sensitivity.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase4_out_v2\\phase4d_mi_export.csv"
+    ]
+  },
+  "layer3_chinese_coefficients_by_cycle.csv": {
+    "committed": "layer3_chinese_coefficients_by_cycle.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase4_out\\v2_phase4b_chinese_by_cycle.csv"
+    ]
+  },
+  "layer3_dedup_external_validation_AUC.csv": {
+    "committed": "layer3_dedup_external_validation_AUC.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase4_out_v2d\\phase4_external_auc.csv"
+    ]
+  },
+  "layer3_dedup_weighted_sensitivity_MEC.csv": {
+    "committed": "layer3_dedup_weighted_sensitivity_MEC.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase7_out_v2d\\v2d_phase7h_weighted_ext.csv"
+    ]
+  },
+  "layer3_external_validation_AUC.csv": {
+    "committed": "layer3_external_validation_AUC.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase4_out_v2\\phase4_external_auc.csv"
+    ]
+  },
+  "layer3_recomputed_AUC_CI_B2000.csv": {
+    "committed": "layer3_recomputed_AUC_CI_B2000.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase4_out_v2\\phase4e_auc_ci.csv"
+    ]
+  },
+  "layer3_weighted_sensitivity_MEC.csv": {
+    "committed": "layer3_weighted_sensitivity_MEC.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase7_out\\v2_phase7h_weighted_ext.csv"
+    ]
+  },
+  "layer4_dedup_three_row_AUC.csv": {
+    "committed": "layer4_dedup_three_row_AUC.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase4_out_v2d\\phase4e_three_row.csv"
+    ]
+  },
+  "layer4_dedup_weighted_calibration.csv": {
+    "committed": "layer4_dedup_weighted_calibration.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase7_out_v2d\\v2d_phase7h_calib_weighted.csv"
+    ]
+  },
+  "layer4_dedup_weighted_full_vs_lipid.csv": {
+    "committed": "layer4_dedup_weighted_full_vs_lipid.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase7_out_v2d\\v2d_phase7h_full_vs_lipid_weighted.csv"
+    ]
+  },
+  "layer4_full_reference_model.csv": {
+    "committed": "layer4_full_reference_model.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase4_out\\phase4_reference_model.csv",
+      "<SRC>\\phase4_out_v2\\phase4_reference_model.csv",
+      "<SRC>\\phase4_out_v2d\\phase4_reference_model.csv"
+    ]
+  },
+  "layer4_increment_NRI_IDI.csv": {
+    "committed": "layer4_increment_NRI_IDI.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase4_out_v2\\phase4_increment.csv"
+    ]
+  },
+  "layer4_lipid_increment_negative_control.csv": {
+    "committed": "layer4_lipid_increment_negative_control.csv",
+    "written_by": [
+      "4_external/phase11_lipid_increment_over_full_model.R"
+    ],
+    "provenance": "direct"
+  },
+  "layer4_lipid_increment_over_full_model.csv": {
+    "committed": "layer4_lipid_increment_over_full_model.csv",
+    "written_by": [
+      "4_external/phase11_lipid_increment_over_full_model.R"
+    ],
+    "provenance": "direct"
+  },
+  "layer4_local_comparator_increment.csv": {
+    "committed": "layer4_local_comparator_increment.csv",
+    "written_by": [
+      "4_external/phase10_local_comparator_increment.R"
+    ],
+    "provenance": "direct"
+  },
+  "layer4_temporal_validation.csv": {
+    "committed": "layer4_temporal_validation.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase4_out\\phase4b_temporal.csv",
+      "<SRC>\\phase4_out\\v2_phase4b_temporal.csv"
+    ]
+  },
+  "layer4_three_row_AUC.csv": {
+    "committed": "layer4_three_row_AUC.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase4_out_v2\\phase4e_three_row.csv"
+    ]
+  },
+  "layer4_three_row_AUC_corrected.csv": {
+    "committed": "layer4_three_row_AUC_corrected.csv",
+    "written_by": [
+      "4_external/phase10_local_comparator_increment.R"
+    ],
+    "provenance": "direct"
+  },
+  "layer4_weighted_calibration.csv": {
+    "committed": "layer4_weighted_calibration.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase7_out\\v2_phase7h_calib_weighted.csv"
+    ]
+  },
+  "layer4_weighted_full_vs_lipid.csv": {
+    "committed": "layer4_weighted_full_vs_lipid.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase7_out\\v2_phase7h_full_vs_lipid_weighted.csv"
+    ]
+  }
 }
