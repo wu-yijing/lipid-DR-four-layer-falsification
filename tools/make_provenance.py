@@ -80,6 +80,7 @@ VARIANT = {
     "layer3_external_validation_AUC.csv": ("primary", "Table 4 core / std / LASSO rows"),
     "layer3_weighted_sensitivity_MEC.csv": ("primary", "Table 4 MEC-weighted columns"),
     "layer3_recomputed_AUC_CI_B2000.csv": ("primary", "Table 4 confidence intervals"),
+    "layer3_paired_AUC_CI.csv": ("primary", "Table 4 confidence intervals (paired bootstrap; supersedes the unpaired auc_ci() of phase4_external_v2.R, see REVISION_NOTES_20261011.md)"),
     "layer3_chinese_coefficients_by_cycle.csv": ("primary", "Section 3.3 temporal subsets"),
     "layer3_MI_pooled_export_sensitivity.csv": ("primary", "Section 3.3 MI-pooled export (0.517 / 0.518)"),
     "layer4_three_row_AUC.csv": ("primary", "Section 3.4 / Figure 4 three-row comparison"),
