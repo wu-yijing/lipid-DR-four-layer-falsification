@@ -66,3 +66,17 @@ output_tables/layer2_text_mode_agreement__selftest_returnedxlsx.json
 # local backup of files edited on 2026-10-09 (see REVISION_NOTES_20261009.md)
 _bak_before_reportfix_20261009/
 _artefact_map.json
+
+# ===== 2026-10-11 数据保护补丁（续）：个体层记录与阅片包，严禁进入公开仓库 =====
+# 规则“后写胜”，故必须放在上面的 !output_tables/** 与 !output_tables/*.csv 之后。
+# 1) layer2_readset_subsets.csv 含 250 个 12 位院内记录号（pid），并逐条附
+#    年份 / 分层 / 可分级性 / any_dr / ICDR 严重度 —— 属个体层记录，不是聚合表。
+#    它被 !output_tables/*.csv 反忽略，若不显式列入黑名单，一次 git add 即会外泄。
+# 2) aprime_reader_pack/ 是 A′ 盲法读片的工作包：既有发给阅片者的空白包，
+#    也有 _selftest/ 下的**模拟**阅片者产物（文件名已标 _SIMULATED_）。
+#    二者都不是本稿报告内容；模拟产物若被提交，极易被误读为真实读数。
+# 3) *.xlsx 是阅片包与裁决表的原生格式，不在上面的 *.docx/*.pdf/*.pptx 红线内。
+#    仓库当前无任何已跟踪 xlsx；如需发布工作簿，请在此处显式反忽略。
+output_tables/layer2_readset_subsets.csv
+aprime_reader_pack/
+*.xlsx
