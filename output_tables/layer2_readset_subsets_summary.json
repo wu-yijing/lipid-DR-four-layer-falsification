@@ -1,0 +1,73 @@
+{
+  "source": "output_tables\\layer2_second_grader_sampling.csv",
+  "seed": 20260929,
+  "subsets": {
+    "min": {
+      "n_records": 88,
+      "n_unique_patients": 87,
+      "n_records_from_repeated_patients": 1,
+      "n_gradable": 88,
+      "n_any_dr": 88,
+      "any_dr_pct_unweighted": 100.0,
+      "n_eff_kish": 88.0,
+      "design_effect": 1.0,
+      "w_max": 1.0,
+      "enrichment_vs_population": 4.16,
+      "cp_upper_misclassification_pct_if_zero_disagreements": 4.11,
+      "by_stratum": {
+        "A1 all G4 proliferative": 24,
+        "A2 all G3 severe NPDR": 15,
+        "A3 all G1 mild NPDR": 49
+      }
+    },
+    "std": {
+      "n_records": 158,
+      "n_unique_patients": 157,
+      "n_records_from_repeated_patients": 1,
+      "n_gradable": 153,
+      "n_any_dr": 119,
+      "any_dr_pct_unweighted": 75.32,
+      "n_eff_kish": 50.3,
+      "design_effect": 3.14,
+      "w_max": 48.29,
+      "enrichment_vs_population": 3.13,
+      "cp_upper_misclassification_pct_if_zero_disagreements": 2.31,
+      "by_stratum": {
+        "A1 all G4 proliferative": 24,
+        "A2 all G3 severe NPDR": 15,
+        "A3 all G1 mild NPDR": 49,
+        "A4 random G2 moderate NPDR": 31,
+        "A5 random G0 no DR": 31,
+        "B1 \"suspected\" stated, no grade given": 8
+      }
+    },
+    "all": {
+      "n_records": 251,
+      "n_unique_patients": 250,
+      "n_records_from_repeated_patients": 1,
+      "n_gradable": 220,
+      "n_any_dr": 123,
+      "any_dr_pct_unweighted": 49.0,
+      "n_eff_kish": 89.1,
+      "design_effect": 2.82,
+      "w_max": 49.27,
+      "enrichment_vs_population": 2.04,
+      "cp_upper_misclassification_pct_if_zero_disagreements": 1.46,
+      "by_stratum": {
+        "A1 all G4 proliferative": 24,
+        "A2 all G3 severe NPDR": 15,
+        "A3 all G1 mild NPDR": 49,
+        "A4 random G2 moderate NPDR": 31,
+        "A5 random G0 no DR": 31,
+        "B1 \"suspected\" stated, no grade given": 8,
+        "B2 graded G0 but positive lesion flag": 27,
+        "C random population-representative": 40,
+        "D1 excluded, DR mentioned, no grade": 10,
+        "D2 excluded, DR not mentioned": 10,
+        "D3 drove pre-adjudication disagreement": 6
+      }
+    }
+  },
+  "note": "min = 普查核心 A1+A2+A3，全部 pi = 1（w = 1），DEFF = 1.00；std 追加 B1 与随机 G0/G2；all 为原 251 设计。",
+  "estimand_note": "本模块报分层一致率，不报单一加权总体 kappa；min 集为普查层，任何\"患病率\"估计均不可解释。"
+}
