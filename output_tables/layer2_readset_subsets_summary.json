@@ -68,6 +68,6 @@
       }
     }
   },
-  "note": "min = 普查核心 A1+A2+A3，全部 pi = 1（w = 1），DEFF = 1.00；std 追加 B1 与随机 G0/G2；all 为原 251 设计。",
-  "estimand_note": "本模块报分层一致率，不报单一加权总体 kappa；min 集为普查层，任何\"患病率\"估计均不可解释。"
+  "note": "min = screening core A1+A2+A3, all pi = 1 (w = 1), DEFF = 1.00; std adds B1 and the random G0/G2 strata; all is the original 251 design.",
+  "estimand_note": "This module reports stratum-specific agreement, not a single weighted population kappa; the min set is the screening stratum, for which any prevalence estimate is uninterpretable."
 }

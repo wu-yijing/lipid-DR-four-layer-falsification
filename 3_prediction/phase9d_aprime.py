@@ -34,7 +34,7 @@ A' 读片集（由冻结的 output_tables/layer2_second_grader_sampling.csv 派�
   selftest   --subset {min,std}              端到端管线自检（模拟 R2/R3/R4），验证 A' 通路可跑通
   verify                                     零侵入回归校验：确认 251 路径未被破坏
 
-诊断口径说明（写进 Methods 时务必区分）
+estimand conventions (keep distinct when writing the Methods)
 --------------------------------------
   * 加权总体 kappa     需要随机层（C/A4/A5）的入样权重；本模块**不报**单一加权总体 kappa，
                        而报**分层一致率**——因为 A' 的 min 集是普查层（w = 1），
@@ -61,7 +61,7 @@ REPO_OT = os.path.join(REPO, "output_tables")
 SAMPLING = os.path.join(REPO_OT, "layer2_second_grader_sampling.csv")
 SUBSET_CSV = os.path.join(REPO_OT, "layer2_readset_subsets.csv")
 
-AP_DIR = os.path.join(REPO, "aprime_reader_pack")          # 阅片包 / 裁决表（含患者报告文本）
+AP_DIR = os.path.join(REPO, "aprime_reader_pack")          # reader pack / adjudication table (contains patient-report text)
 AP_OT = os.path.join(AP_DIR, "out_tables")                 # A' 的分析输出（json / matrix / 分歧表）
 AP_DOC = os.path.join(AP_DIR, "si_tables")                 # SI 表骨架
 
@@ -165,7 +165,8 @@ def install(subset):
     if subset == 'all':
         p9c.master_key = orig_master_key
     else:
-        # 分析单位是"记录"而非"患者"：1 名患者在核心层内有 2 条筛查记录（2022/2023），
+        # the unit of analysis is the record, not the patient: one patient contributes two
+        # screening records in the core stratum (2022/2023),
         # 故成员判定必须用 (pid, year) 复合键——(pid, year) 在本队列 251 条中唯一。
         mem = {(r.pid, r.year) for r in readset(subset).itertuples()}
         assert len(mem) == len(readset(subset)), '子集内 (pid, year) 不唯一'
@@ -192,7 +193,7 @@ def cp_upper(k, n, alpha=0.05):
 
 
 def _kap(left, right, weights=None, cats=None):
-    """Cohen's kappa，但先做可识别性检查。
+    """Cohen's kappa, but with an identifiability check first.
 
     任一侧评级只有单一观测类别时，kappa 在数学上不可识别（一致性无论多高都算出 0），
     此时返回 (None, 原因)，而不是返回一个会误导的 0。
@@ -210,7 +211,8 @@ def _kap(left, right, weights=None, cats=None):
 
 
 def stratified(key, a2, a3):
-    """按分层报告一致率；k 不可识别时（单一类别）给出一致率与 CP 上界。"""
+    """Report agreement by stratum; when k is unidentifiable (single category), give the
+    agreement rate and the CP upper bound."""
     P_grad = key.gradeable.astype(int).values
     P_any = key.any_dr.fillna(0).astype(float).values
     P5 = key.severity.fillna(-1).astype(float).values
@@ -303,7 +305,7 @@ def nullify_degenerate(res, key, a2, a3):
             notes['anydr_kappa'] = n
         if ref_constant:
             # 阅片者之间有分歧时 kappa 在代数上算得出，但患病率 100% 时它受 kappa 悖论支配，
-            # 趋近 0 而与其实际一致率无关——因此同样不作为可报告量。
+            # tends to 0 independently of its actual agreement rate, so it is likewise not reported.
             b['anydr_kappa'] = None
             b['anydr_kappa_CI'] = None
             notes['anydr_kappa'] = ('kappa paradox: the reference endpoint takes a single category in this '
@@ -338,10 +340,8 @@ def cmd_readsets():
         'source': os.path.relpath(SAMPLING, REPO),
         'seed': SEED,
         'subsets': st,
-        'note': ('min = 普查核心 A1+A2+A3，全部 pi = 1（w = 1），DEFF = 1.00；'
-                 'std 追加 B1 与随机 G0/G2；all 为原 251 设计。'),
-        'estimand_note': ('本模块报分层一致率，不报单一加权总体 kappa；'
-                          'min 集为普查层，任何"患病率"估计均不可解释。'),
+        'note': ('min = screening core A1+A2+A3, all pi = 1 (w = 1), DEFF = 1.00; std adds B1 and the random G0/G2 strata; all is the original 251 design.'),
+        'estimand_note': ('This module reports stratum-specific agreement, not a single weighted population kappa; the min set is the screening stratum, for which any prevalence estimate is uninterpretable.'),
     }
     json.dump(payload, open(os.path.join(REPO_OT, 'layer2_readset_subsets_summary.json'), 'w',
                             encoding='utf-8'), ensure_ascii=False, indent=2)

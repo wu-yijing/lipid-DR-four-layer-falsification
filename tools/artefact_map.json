@@ -15,10 +15,10 @@
   },
   "MR_exmore_sensitivity.csv": {
     "committed": "MR_exmore_sensitivity.csv",
+    "provenance": "direct",
     "written_by": [
       "1_mr\\phase8_exmore_sensitivity.py"
-    ],
-    "provenance": "direct"
+    ]
   },
   "MR_heterogeneity_CochranQ.csv": {
     "committed": "MR_heterogeneity_CochranQ.csv",
@@ -43,10 +43,10 @@
   },
   "cis_drug_target_MR_PPARG.csv": {
     "committed": "cis_drug_target_MR_PPARG.csv",
+    "provenance": "direct",
     "written_by": [
       "2_cis_mr\\phase18_pparg_cis_mr.R"
-    ],
-    "provenance": "direct"
+    ]
   },
   "cis_drug_target_MR_six_targets.csv": {
     "committed": "cis_drug_target_MR_six_targets.csv",
@@ -57,10 +57,10 @@
   },
   "cis_instrument_strength_PPARG.csv": {
     "committed": "cis_instrument_strength_PPARG.csv",
+    "provenance": "direct",
     "written_by": [
       "2_cis_mr\\phase18_pparg_cis_mr.R"
-    ],
-    "provenance": "direct"
+    ]
   },
   "cis_instrument_strength_by_target.csv": {
     "committed": "cis_instrument_strength_by_target.csv",
@@ -78,17 +78,17 @@
   },
   "cis_pparg_correlated_ivw.csv": {
     "committed": "cis_pparg_correlated_ivw.csv",
+    "provenance": "direct",
     "written_by": [
       "2_cis_mr\\phase18_pparg_cis_mr.R"
-    ],
-    "provenance": "direct"
+    ]
   },
   "cis_pparg_per_instrument_wald.csv": {
     "committed": "cis_pparg_per_instrument_wald.csv",
+    "provenance": "direct",
     "written_by": [
       "2_cis_mr\\phase18_pparg_cis_mr.R"
-    ],
-    "provenance": "direct"
+    ]
   },
   "emerging_markers_NHANES.csv": {
     "committed": "emerging_markers_NHANES.csv",
@@ -114,101 +114,101 @@
   },
   "layer1_MDE_by_exposure.csv": {
     "committed": "layer1_MDE_by_exposure.csv",
+    "provenance": "direct",
     "written_by": [
       "1_mr\\phase12_power_mde.py"
-    ],
-    "provenance": "direct"
+    ]
   },
   "layer1_cis_target_MDE.csv": {
     "committed": "layer1_cis_target_MDE.csv",
+    "provenance": "direct",
     "written_by": [
       "2_cis_mr\\phase13_cis_MDE.py"
-    ],
-    "provenance": "direct"
+    ]
   },
   "layer1_cis_target_MDE_PPARG.csv": {
     "committed": "layer1_cis_target_MDE_PPARG.csv",
+    "provenance": "direct",
     "written_by": [
       "2_cis_mr\\phase18_pparg_cis_mr.R"
-    ],
-    "provenance": "direct"
+    ]
   },
   "layer1_external_appendicitis_negctrl.csv": {
     "committed": "layer1_external_appendicitis_negctrl.csv",
+    "provenance": "direct",
     "written_by": [
       "4_external\\phase15_external_outcome_mr.R"
-    ],
-    "provenance": "direct"
+    ]
   },
   "layer1_external_height_negctrl.csv": {
     "committed": "layer1_external_height_negctrl.csv",
+    "provenance": "direct",
     "written_by": [
       "4_external\\phase15_external_outcome_mr.R"
-    ],
-    "provenance": "direct"
+    ]
   },
   "layer1_external_ukb_dr_replication.csv": {
     "committed": "layer1_external_ukb_dr_replication.csv",
+    "provenance": "direct",
     "written_by": [
       "4_external\\phase15_external_outcome_mr.R"
-    ],
-    "provenance": "direct"
+    ]
   },
   "layer1_instrument_detail_F_R2.csv": {
     "committed": "layer1_instrument_detail_F_R2.csv",
+    "provenance": "direct",
     "written_by": [
       "1_mr\\phase12_power_mde.py"
-    ],
-    "provenance": "direct"
+    ]
   },
   "layer1_instrument_strength_by_exposure.csv": {
     "committed": "layer1_instrument_strength_by_exposure.csv",
+    "provenance": "direct",
     "written_by": [
       "1_mr\\phase12_power_mde.py"
-    ],
-    "provenance": "direct"
+    ]
   },
   "layer1_negctrl_estimates_appendicitis_negctrl.csv": {
     "committed": "layer1_negctrl_estimates_appendicitis_negctrl.csv",
+    "provenance": "direct",
     "written_by": [
       "4_external\\phase17_negctrl_diagnostics.R"
-    ],
-    "provenance": "direct"
+    ]
   },
   "layer1_negctrl_heterogeneity_appendicitis_negctrl.csv": {
     "committed": "layer1_negctrl_heterogeneity_appendicitis_negctrl.csv",
+    "provenance": "direct",
     "written_by": [
       "4_external\\phase17_negctrl_diagnostics.R"
-    ],
-    "provenance": "direct"
+    ]
   },
   "layer1_negctrl_ivw_fe_re_appendicitis_negctrl.csv": {
     "committed": "layer1_negctrl_ivw_fe_re_appendicitis_negctrl.csv",
+    "provenance": "direct",
     "written_by": [
       "4_external\\phase17_negctrl_diagnostics.R"
-    ],
-    "provenance": "direct"
+    ]
   },
   "layer1_negctrl_pleiotropy_appendicitis_negctrl.csv": {
     "committed": "layer1_negctrl_pleiotropy_appendicitis_negctrl.csv",
+    "provenance": "direct",
     "written_by": [
       "4_external\\phase17_negctrl_diagnostics.R"
-    ],
-    "provenance": "direct"
+    ]
   },
   "layer1_robust_estimators.csv": {
     "committed": "layer1_robust_estimators.csv",
+    "provenance": "direct",
     "written_by": [
       "1_mr\\phase14_robust_estimators.R"
-    ],
-    "provenance": "direct"
+    ]
   },
   "layer1_winners_curse_threshold_sensitivity.csv": {
     "committed": "layer1_winners_curse_threshold_sensitivity.csv",
+    "provenance": "direct",
     "written_by": [
       "1_mr\\phase12_power_mde.py"
-    ],
-    "provenance": "direct"
+    ]
   },
   "layer2_MI_pooled_coefficients_3seeds.csv": {
     "committed": "layer2_MI_pooled_coefficients_3seeds.csv",
@@ -305,10 +305,10 @@
   },
   "layer2_design_condition_numbers.csv": {
     "committed": "layer2_design_condition_numbers.csv",
+    "provenance": "direct",
     "written_by": [
       "3_prediction/phase10_reporting_gaps.py"
-    ],
-    "provenance": "direct"
+    ]
   },
   "layer2_fraction_missing_information.csv": {
     "committed": "layer2_fraction_missing_information.csv",
@@ -347,10 +347,10 @@
   },
   "layer2_independent_reextraction_summary.csv": {
     "committed": "layer2_independent_reextraction_summary.csv",
+    "provenance": "direct",
     "written_by": [
       "3_prediction\\phase9_independent_reextraction.py"
-    ],
-    "provenance": "direct"
+    ]
   },
   "layer2_missingness_mechanism.csv": {
     "committed": "layer2_missingness_mechanism.csv",
@@ -361,10 +361,10 @@
   },
   "layer2_missingness_patterns.csv": {
     "committed": "layer2_missingness_patterns.csv",
+    "provenance": "direct",
     "written_by": [
       "3_prediction\\phase8_review_revision_analyses.py"
-    ],
-    "provenance": "direct"
+    ]
   },
   "layer2_missingness_rates.csv": {
     "committed": "layer2_missingness_rates.csv",
@@ -376,17 +376,17 @@
   },
   "layer2_outcome_audit_and_bounds.csv": {
     "committed": "layer2_outcome_audit_and_bounds.csv",
+    "provenance": "direct",
     "written_by": [
       "3_prediction\\phase8b_outcome_error_bounds.py"
-    ],
-    "provenance": "direct"
+    ]
   },
   "layer2_outcome_crosstab_full.csv": {
     "committed": "layer2_outcome_crosstab_full.csv",
+    "provenance": "direct",
     "written_by": [
       "3_prediction\\phase8_review_revision_analyses.py"
-    ],
-    "provenance": "direct"
+    ]
   },
   "layer2_outcome_rebuild_crosstab.csv": {
     "committed": "layer2_outcome_rebuild_crosstab.csv",
@@ -406,17 +406,17 @@
   },
   "layer2_parsimonious_markers_classified.csv": {
     "committed": "layer2_parsimonious_markers_classified.csv",
+    "provenance": "direct",
     "written_by": [
       "3_prediction/phase10_reporting_gaps.py"
-    ],
-    "provenance": "direct"
+    ]
   },
   "layer2_parsimonious_models.csv": {
     "committed": "layer2_parsimonious_models.csv",
+    "provenance": "direct",
     "written_by": [
       "3_prediction\\phase8_review_revision_analyses.py"
-    ],
-    "provenance": "direct"
+    ]
   },
   "layer2_pmsampsize_grid.csv": {
     "committed": "layer2_pmsampsize_grid.csv",
@@ -431,31 +431,45 @@
   },
   "layer2_pmsampsize_verification.csv": {
     "committed": "layer2_pmsampsize_verification.csv",
+    "provenance": "direct",
     "written_by": [
       "3_prediction/phase10_reporting_gaps.py"
-    ],
-    "provenance": "direct"
+    ]
+  },
+  "layer2_readset_subsets.csv": {
+    "committed": "layer2_readset_subsets.csv",
+    "provenance": "direct",
+    "written_by": [
+      "3_prediction\\phase9d_aprime.py"
+    ]
+  },
+  "layer2_readset_subsets_summary.json": {
+    "committed": "layer2_readset_subsets_summary.json",
+    "provenance": "direct",
+    "written_by": [
+      "3_prediction\\phase9d_aprime.py"
+    ]
   },
   "layer2_reporting_gap_inventory.csv": {
     "committed": "layer2_reporting_gap_inventory.csv",
+    "provenance": "direct",
     "written_by": [
       "3_prediction/phase10_reporting_gaps.py"
-    ],
-    "provenance": "direct"
+    ]
   },
   "layer2_reporting_gaps.csv": {
     "committed": "layer2_reporting_gaps.csv",
+    "provenance": "direct",
     "written_by": [
       "3_prediction/phase10_reporting_gaps.py"
-    ],
-    "provenance": "direct"
+    ]
   },
   "layer2_second_grader_composition.csv": {
     "committed": "layer2_second_grader_composition.csv",
+    "provenance": "direct",
     "written_by": [
       "3_prediction/phase10_reporting_gaps.py"
-    ],
-    "provenance": "direct"
+    ]
   },
   "layer2_second_grader_sampling.csv": {
     "committed": "layer2_second_grader_sampling.csv",
@@ -466,10 +480,10 @@
   },
   "layer2_second_grader_sampling_summary.json": {
     "committed": "layer2_second_grader_sampling_summary.json",
+    "provenance": "direct",
     "written_by": [
       "3_prediction/phase9b_second_grader_sampling.py"
-    ],
-    "provenance": "direct"
+    ]
   },
   "layer2_selection_model.csv": {
     "committed": "layer2_selection_model.csv",
@@ -505,10 +519,10 @@
   },
   "layer2_text_mode_agreement_r2r3_adj.json": {
     "committed": "layer2_text_mode_agreement_r2r3_adj.json",
+    "provenance": "direct",
     "written_by": [
       "3_prediction/phase9c_text_mode.py"
-    ],
-    "provenance": "direct"
+    ]
   },
   "layer2_text_mode_discordances.csv": {
     "committed": "layer2_text_mode_discordances.csv",
@@ -570,6 +584,13 @@
       "<SRC>\\phase4_out_v2\\phase4_external_auc.csv"
     ]
   },
+  "layer3_paired_AUC_CI.csv": {
+    "committed": "layer3_paired_AUC_CI.csv",
+    "provenance": "direct",
+    "written_by": [
+      "4_external\\phase21_paired_auc_ci.R"
+    ]
+  },
   "layer3_recomputed_AUC_CI_B2000.csv": {
     "committed": "layer3_recomputed_AUC_CI_B2000.csv",
     "provenance": "collected",
@@ -623,24 +644,24 @@
   },
   "layer4_lipid_increment_negative_control.csv": {
     "committed": "layer4_lipid_increment_negative_control.csv",
+    "provenance": "direct",
     "written_by": [
       "4_external/phase11_lipid_increment_over_full_model.R"
-    ],
-    "provenance": "direct"
+    ]
   },
   "layer4_lipid_increment_over_full_model.csv": {
     "committed": "layer4_lipid_increment_over_full_model.csv",
+    "provenance": "direct",
     "written_by": [
       "4_external/phase11_lipid_increment_over_full_model.R"
-    ],
-    "provenance": "direct"
+    ]
   },
   "layer4_local_comparator_increment.csv": {
     "committed": "layer4_local_comparator_increment.csv",
+    "provenance": "direct",
     "written_by": [
       "4_external/phase10_local_comparator_increment.R"
-    ],
-    "provenance": "direct"
+    ]
   },
   "layer4_temporal_validation.csv": {
     "committed": "layer4_temporal_validation.csv",
@@ -659,10 +680,10 @@
   },
   "layer4_three_row_AUC_corrected.csv": {
     "committed": "layer4_three_row_AUC_corrected.csv",
+    "provenance": "direct",
     "written_by": [
       "4_external/phase10_local_comparator_increment.R"
-    ],
-    "provenance": "direct"
+    ]
   },
   "layer4_weighted_calibration.csv": {
     "committed": "layer4_weighted_calibration.csv",
@@ -676,6 +697,13 @@
     "provenance": "collected",
     "sources": [
       "<SRC>\\phase7_out\\v2_phase7h_full_vs_lipid_weighted.csv"
+    ]
+  },
+  "phase20_outcome_ungradable_bounds.csv": {
+    "committed": "phase20_outcome_ungradable_bounds.csv",
+    "provenance": "direct",
+    "written_by": [
+      "4_external\\phase20_outcome_ungradable_bounds.R"
     ]
   }
 }

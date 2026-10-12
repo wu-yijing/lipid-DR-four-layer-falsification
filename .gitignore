@@ -80,3 +80,7 @@ _artefact_map.json
 output_tables/layer2_readset_subsets.csv
 aprime_reader_pack/
 *.xlsx
+
+# local backups and run logs: never committed (disclosure gate checks these too)
+_bak_*/
+_phase*.log
