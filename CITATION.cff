@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this code or the aggregate results, please cite the archived version."
+title: "Lipids do not support stand-alone, transportable risk stratification for diabetic retinopathy: a four-layer evaluation, with a cautionary finding on outcome misclassification"
+abstract: "Analysis code, figure/table-generation scripts and de-identified aggregate outputs supporting a four-layer evaluation of whether lipids can support a stand-alone, transportable diabetic-retinopathy risk tool. The repository contains no manuscript text and no individual-level data."
+type: software
+license: MIT
+authors:
+  - family-names: Wu
+    given-names: Yijing
+    orcid: "https://orcid.org/0009-0006-3921-9984"
+    affiliation: "The First Affiliated Hospital of Anhui Medical University; Bengbu First People's Hospital"
+  - family-names: Chen
+    given-names: Mingwei
+    orcid: "https://orcid.org/0000-0002-8439-0469"
+    affiliation: "The First Affiliated Hospital of Anhui Medical University"
+  - family-names: Wu
+    given-names: Qiuyan
+    orcid: "https://orcid.org/0009-0002-4957-0015"
+    affiliation: "The First Affiliated Hospital of Bengbu Medical University"
+  - family-names: Zhao
+    given-names: Jingyi
+    orcid: "https://orcid.org/0009-0008-2547-4786"
+    affiliation: "The First Affiliated Hospital of Bengbu Medical University"
+  - family-names: Jin
+    given-names: Guoxi
+    orcid: "https://orcid.org/0000-0002-2364-0364"
+    affiliation: "The First Affiliated Hospital of Bengbu Medical University"
+version: 1.0.0
+date-released: "2026-10-12"
+repository-code: "https://github.com/wu-yijing/lipid-DR-four-layer-falsification"
+keywords:
+  - diabetic retinopathy
+  - risk prediction
+  - external validation
+  - Mendelian randomisation
+  - outcome misclassification
