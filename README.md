@@ -273,14 +273,34 @@ Figures are source-generated and **not** committed (PNGs are binary and regenera
    `output_tables/PROVENANCE.md`, and every value they contain is independently re-derived by
    `tools/audit_repo_consistency.py`.
 
-## Open items before submission
+## Pre-submission items (status)
 
-- [ ] Outcome-side positive control (genetically predicted type 2 diabetes or HbA1c against the
-      same DR endpoint), to demonstrate that the layer-1 instrument set and dataset can detect a
-      real effect. Scaffold and pre-flight check: `1_mr/phase11_positive_control.py`.
-- [ ] Replication of the layer-1 null in a second, independent DR outcome dataset.
-- [ ] Blinded human re-abstraction of the source report text (sample and strata:
-      `layer2_second_grader_sampling_summary.json`); the layer-2 conclusion is conditional on it.
+Three items were listed here as open before submission. None of them is still outstanding.
+
+1. **Outcome-side positive control** — done. Genetically predicted type 2 diabetes and the
+   better-powered glycaemic panel (HbA1c, fasting glucose, fasting insulin) were run against the
+   same DR endpoint, to show that the layer-1 instrument sets and the endpoint dataset can
+   register a real effect. The 345 harmonised HbA1c instruments return OR 2.13 for type 2
+   diabetes and 1.00 for DR; the fasting-glucose set returns 6.25 for type 2 diabetes and is null
+   for DR. Producer: `1_mr/phase11_positive_control.py` (writes `MR_positive_control.csv`);
+   reported in the manuscript's outcome-side positive-control section and in Supplementary
+   Table S16.
+
+2. **Replication of the layer-1 null in a second, independent DR outcome dataset** — done. The
+   six-lipid layer-1 analyses were repeated against an independent UK Biobank diabetic-retinopathy
+   GWAS (308 cases / 456,040 controls). Producer: `4_external/phase15_external_outcome_mr.R`;
+   output `output_tables/layer1_external_ukb_dr_replication.csv`; reported in the manuscript.
+
+3. **Blinded human re-abstraction of the source report text** — designed, but it could not be
+   carried out. The sample, strata, sizes and design weights are specified and committed
+   (`layer2_second_grader_sampling_summary.json`, `layer2_readset_subsets_summary.json`; producer
+   `3_prediction/phase9b_second_grader_sampling.py`), but the material it requires — an earlier
+   independent reading, or a record matching the platform's automated first-pass output to the
+   final signed report — is no longer retrievable from the screening platform or the hospital
+   information department. The source records therefore remain graded exactly as originally
+   signed, and the manuscript reports the absence of a human re-abstraction as the principal
+   limitation of the outcome definition. The layer-2 conclusion consequently remains conditional
+   on a re-abstraction that these data cannot support.
 
 ## Citation
 
