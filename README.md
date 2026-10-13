@@ -1,5 +1,7 @@
 # Lipids do not support stand-alone, transportable risk stratification for diabetic retinopathy
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23331501.svg)](https://doi.org/10.5281/zenodo.23331501)
+
 Analysis code and **de-identified aggregate results** supporting the manuscript
 
 > *Lipids do not support stand-alone, transportable risk stratification for diabetic
@@ -279,6 +281,18 @@ Figures are source-generated and **not** committed (PNGs are binary and regenera
 - [ ] Replication of the layer-1 null in a second, independent DR outcome dataset.
 - [ ] Blinded human re-abstraction of the source report text (sample and strata:
       `layer2_second_grader_sampling_summary.json`); the layer-2 conclusion is conditional on it.
+
+## Citation
+
+If you use this code or the aggregate results, please cite the archived version:
+
+> Wu Y, Chen M, Wu Q, Zhao J, Jin G. *Analysis code and de-identified aggregate results for
+> "Lipids do not support stand-alone, transportable risk stratification for diabetic retinopathy:
+> a four-layer evaluation, with a cautionary finding on outcome misclassification"*. Zenodo; 2026.
+> Version 1.0.0. doi: [10.5281/zenodo.23331502](https://doi.org/10.5281/zenodo.23331502)
+
+The concept DOI [10.5281/zenodo.23331501](https://doi.org/10.5281/zenodo.23331501) refers to all
+versions and always resolves to the latest one. Machine-readable metadata is in `CITATION.cff`.
 
 ## License
 

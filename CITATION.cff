@@ -27,6 +27,11 @@ authors:
     affiliation: "The First Affiliated Hospital of Bengbu Medical University"
 version: 1.0.0
 date-released: "2026-10-12"
+doi: 10.5281/zenodo.23331502
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23331501
+    description: "Concept DOI (all versions of this archive)"
 repository-code: "https://github.com/wu-yijing/lipid-DR-four-layer-falsification"
 keywords:
   - diabetic retinopathy
