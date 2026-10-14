@@ -16,7 +16,7 @@ table stops supporting it.
 
 | class | n | meaning |
 |---|---|---|
-| `direct` | 36 | a committed script writes this exact name into `output_tables/` |
+| `direct` | 42 | a committed script writes this exact name into `output_tables/` |
 | `collected` | 46 | byte-identical to a named output of a named script (rename step made explicit) |
 | `hand-assembled` | 11 | built by hand from script outputs; values re-derived by the audit |
 | `local-only` | 8 | record-level file held locally only; listed in `.gitignore`, never committed |
@@ -76,7 +76,9 @@ screen, so each is stated explicitly.
 | `cis_drug_target_MR_PPARG.csv` | primary | `2_cis_mr\phase18_pparg_cis_mr.R` |  |
 | `cis_instrument_strength_PPARG.csv` | primary | `2_cis_mr\phase18_pparg_cis_mr.R` |  |
 | `cis_pparg_correlated_ivw.csv` | primary | `2_cis_mr\phase18_pparg_cis_mr.R` |  |
+| `cis_pparg_ld_clump_crosscheck.csv` | primary | `2_cis_mr\phase19_pparg_ld_clump_server.R` |  |
 | `cis_pparg_per_instrument_wald.csv` | primary | `2_cis_mr\phase18_pparg_cis_mr.R` |  |
+| `cis_six_target_ld_clump_crosscheck.csv` | primary | `2_cis_mr\phase19b_six_target_ld_clump_crosscheck.R` |  |
 | `layer1_MDE_by_exposure.csv` | primary | `1_mr\phase12_power_mde.py` |  |
 | `layer1_cis_target_MDE.csv` | primary | `2_cis_mr\phase13_cis_MDE.py` |  |
 | `layer1_cis_target_MDE_PPARG.csv` | primary | `2_cis_mr\phase18_pparg_cis_mr.R` |  |
@@ -99,15 +101,19 @@ screen, so each is stated explicitly.
 | `layer2_parsimonious_markers_classified.csv` | primary | `3_prediction/phase10_reporting_gaps.py` | Supplementary Table S9 - explicit marker classes |
 | `layer2_parsimonious_models.csv` | primary | `3_prediction\phase8_review_revision_analyses.py` | Supplementary Table S9 |
 | `layer2_pmsampsize_verification.csv` | primary | `3_prediction/phase10_reporting_gaps.py` | limitation 6 - verification of the quoted requirements |
+| `layer2_readset_subsets.csv` | primary | `3_prediction\phase9d_aprime.py` |  |
+| `layer2_readset_subsets_summary.json` | primary | `3_prediction\phase9d_aprime.py` |  |
 | `layer2_reporting_gap_inventory.csv` | primary | `3_prediction/phase10_reporting_gaps.py` | audit trail - statistics still without an interval |
 | `layer2_reporting_gaps.csv` | primary | `3_prediction/phase10_reporting_gaps.py` | Section 3.2 / Table 3 - intervals for AUC and IDI |
 | `layer2_second_grader_composition.csv` | primary | `3_prediction/phase10_reporting_gaps.py` | limitation 12 - composition of the review sample |
 | `layer2_second_grader_sampling_summary.json` | primary | `3_prediction/phase9b_second_grader_sampling.py` | limitation 12 re-abstraction plan |
 | `layer2_text_mode_agreement_r2r3_adj.json` | primary | `3_prediction/phase9c_text_mode.py` | Supplementary Table S14a |
+| `layer3_paired_AUC_CI.csv` | primary | `4_external\phase21_paired_auc_ci.R` | Table 4 confidence intervals (paired bootstrap; supersedes the unpaired auc_ci() of phase4_external_v2.R, see REVISION_NOTES_20261011.md) |
 | `layer4_lipid_increment_negative_control.csv` | primary | `4_external/phase11_lipid_increment_over_full_model.R` | Section 3.4 / Supplementary Table S21 - same-number random-variable control |
 | `layer4_lipid_increment_over_full_model.csv` | primary | `4_external/phase11_lipid_increment_over_full_model.R` | Section 3.4 / Supplementary Table S21 - lipids added to the full reference model |
 | `layer4_local_comparator_increment.csv` | primary | `4_external/phase10_local_comparator_increment.R` | Section 3.4 - attributable increment with intervals |
 | `layer4_three_row_AUC_corrected.csv` | primary | `4_external/phase10_local_comparator_increment.R` | Section 3.4 - corrected three-row comparison |
+| `phase20_outcome_ungradable_bounds.csv` | primary | `4_external\phase20_outcome_ungradable_bounds.R` |  |
 
 ## Collected and renamed from a script output
 

@@ -83,11 +83,25 @@
       "2_cis_mr\\phase18_pparg_cis_mr.R"
     ]
   },
+  "cis_pparg_ld_clump_crosscheck.csv": {
+    "committed": "cis_pparg_ld_clump_crosscheck.csv",
+    "provenance": "direct",
+    "written_by": [
+      "2_cis_mr\\phase19_pparg_ld_clump_server.R"
+    ]
+  },
   "cis_pparg_per_instrument_wald.csv": {
     "committed": "cis_pparg_per_instrument_wald.csv",
     "provenance": "direct",
     "written_by": [
       "2_cis_mr\\phase18_pparg_cis_mr.R"
+    ]
+  },
+  "cis_six_target_ld_clump_crosscheck.csv": {
+    "committed": "cis_six_target_ld_clump_crosscheck.csv",
+    "provenance": "direct",
+    "written_by": [
+      "2_cis_mr\\phase19b_six_target_ld_clump_crosscheck.R"
     ]
   },
   "emerging_markers_NHANES.csv": {
