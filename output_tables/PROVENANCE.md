@@ -1,6 +1,6 @@
 # Aggregate result tables: provenance register
 
-Every file under `output_tables/` is listed below with the script that produces it, the
+Every table under `output_tables/` is listed below with the script that produces it, the
 analysis variant it belongs to, and which part of the manuscript it supports. This
 register exists because the `layer*` / `MR_*` file names are **not** the names the
 scripts write: the scripts emit phase-named files into `phase*_out/` in the analysis
@@ -11,6 +11,14 @@ stable names. `tools/artefact_map.json` is the machine-readable form and
 **Run `tools/audit_repo_consistency.py` before quoting any number from this directory.**
 The audit re-derives every quantity the manuscript reports and fails if a committed
 table stops supporting it.
+
+## License
+
+The tables in this directory are aggregate results and are released under the
+Creative Commons Attribution 4.0 International licence (CC BY 4.0); the terms are
+in the `LICENSE` file beside this register. The analysis code is released under the
+MIT licence, in the `LICENSE` file at the repository root. Manuscript text and
+individual-level data are not covered by either licence.
 
 ## Provenance classes
 

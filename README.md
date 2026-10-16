@@ -316,5 +316,7 @@ versions and always resolves to the latest one. Machine-readable metadata is in 
 
 ## License
 
-MIT — code and aggregate outputs only. Manuscript text and individual-level data are not covered
-by this license.
+The analysis code is released under the **MIT** licence (repository-root `LICENSE`). The aggregate
+result tables in `output_tables/` are released under the **Creative Commons Attribution 4.0
+International** licence (CC BY 4.0); the terms are in `output_tables/LICENSE`. Manuscript text and
+individual-level data are not covered by either licence.
