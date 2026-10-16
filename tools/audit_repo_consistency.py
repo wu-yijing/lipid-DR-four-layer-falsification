@@ -868,6 +868,18 @@ MS_REQUIRED = [
     (r"0\.029", "transport component"),
 ]
 
+#: Paragraphs inside the counted span that the front matter's convention excludes. The
+#: manuscript states its count as "the Introduction to Conclusions, the Declarations and
+#: the table footnotes ... excluding ... the funding statement, acknowledgements and
+#: references", so the Declarations block counts but the funding statement inside it,
+#: and the acknowledgements, do not.
+WORD_COUNT_EXCLUDED = re.compile(r"^(Funding|Acknowledgments|Acknowledgements)\b")
+
+#: The recount reads paragraph text only: it cannot see table footnotes held inside table
+#: cells, and it tokenises hyphenated compounds differently from Word. The tolerance
+#: absorbs that gap, and E4a below keeps it far smaller than any real drift.
+WORD_COUNT_TOL = 50
+
 
 def audit_manuscript(path: Path):
     S = "manuscript"
@@ -898,22 +910,36 @@ def audit_manuscript(path: Path):
               "absent" if not m else "FOUND: %r" % m.group(0), m is None, fatal=False)
 
     # The declared word count is only meaningful if it is recomputed rather than
-    # trusted. This check makes the two unable to drift apart again, which is how
-    # the 10,813 figure survived several revisions after the text had grown.
+    # trusted. This check makes the two unable to drift apart again, which is how the
+    # 10,813 figure survived several revisions after the text had grown.
+    #
+    # The recount has to follow the convention the front matter states, or the check
+    # reports a false positive: an earlier implementation stopped *before* Declarations,
+    # which under-counted by the whole Declarations block and so could never agree with
+    # a correct declaration. The span is Introduction..References, less the headings,
+    # the funding statement and the acknowledgements.
     P0 = d.paragraphs
     try:
         i0 = [i for i, p in enumerate(P0) if p.text.strip().startswith("1. Introduction")][0]
         i1 = [i for i, p in enumerate(P0) if p.text.strip().startswith("References")][0]
         seg = P0[i0:i1]
-        dec = [k for k, p in enumerate(seg) if p.text.strip().startswith("Declarations")][0]
-        measured = sum(len(p.text.split()) for p in seg[:dec]
-                       if p.text.strip() and not p.style.name.startswith("Heading"))
+        measured = sum(len(p.text.split()) for p in seg
+                       if p.text.strip()
+                       and not p.style.name.startswith("Heading")
+                       and not WORD_COUNT_EXCLUDED.match(p.text.strip()))
         m = re.search(r"Main text:\s*([\d,]+)\s*words", txt)
         declared = int(m.group(1).replace(",", "")) if m else None
-        check(S, "E4", "declared main-text word count equals the measured count", measured,
-              declared, declared == measured,
-              note="convention: Introduction..Conclusions, excluding Declarations and headings; "
-                   "the front matter states this exclusion list explicitly")
+        check(S, "E4", "declared main-text word count agrees with a recount under the "
+                       "convention the front matter states",
+              measured, declared, near(declared, measured, WORD_COUNT_TOL),
+              note="Introduction..References, less headings, the funding statement and the "
+                   "acknowledgements; tolerance %d words because the recount cannot see table "
+                   "footnotes held inside table cells" % WORD_COUNT_TOL)
+        # a tolerance is a gate too: prove it still rejects the value that drifted before
+        check(S, "E4a", "the word-count tolerance still rejects the historical 10,813 declaration",
+              "rejected", "rejected" if abs(10813 - measured) > WORD_COUNT_TOL else "ACCEPTED",
+              abs(10813 - measured) > WORD_COUNT_TOL,
+              note="recount %d against a historical 10,813 declaration" % measured)
     except Exception as exc:                  # never let a missing anchor crash the audit
         check(S, "E4", "main-text word count computable", True, False, False,
               fatal=False, note=str(exc))
