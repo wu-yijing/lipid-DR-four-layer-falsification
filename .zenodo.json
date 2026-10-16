@@ -1,6 +1,6 @@
 {
   "title": "Lipids do not support stand-alone, transportable risk stratification for diabetic retinopathy: a four-layer evaluation, with a cautionary finding on outcome misclassification",
-  "description": "Analysis code, figure/table-generation scripts and de-identified aggregate outputs for a four-layer evaluation of whether lipids can support a stand-alone, transportable diabetic-retinopathy risk tool. The repository contains no manuscript text and no individual-level data. Individual-level clinical records are held under the ethics approval described in the manuscript (Bengbu First People's Hospital, approval BBYY2023072) and are not shared.",
+  "description": "Analysis code, figure/table-generation scripts and de-identified aggregate outputs for a four-layer evaluation of whether lipids can support a stand-alone, transportable diabetic-retinopathy risk tool. The repository contains no manuscript text and no individual-level data. Individual-level clinical records are held under the ethics approval described in the manuscript (Bengbu First People's Hospital, approval BBYY2023072) and are not shared. The analysis code is released under the MIT licence and the aggregate result tables under the Creative Commons Attribution 4.0 International licence (CC BY 4.0).",
   "upload_type": "software",
   "license": "mit",
   "access_right": "open",
