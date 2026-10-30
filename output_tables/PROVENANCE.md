@@ -24,7 +24,7 @@ individual-level data are not covered by either licence.
 
 | class | n | meaning |
 |---|---|---|
-| `direct` | 44 | a committed script writes this exact name into `output_tables/` |
+| `direct` | 45 | a committed script writes this exact name into `output_tables/` |
 | `collected` | 46 | byte-identical to a named output of a named script (rename step made explicit) |
 | `hand-assembled` | 11 | built by hand from script outputs; values re-derived by the audit |
 | `local-only` | 8 | record-level file held locally only; listed in `.gitignore`, never committed |
@@ -83,6 +83,7 @@ screen, so each is stated explicitly.
 | `MR_exmore_sensitivity.csv` | primary | `1_mr\phase8_exmore_sensitivity.py` | Section 3.1 / Supplementary Table S12 |
 | `MVMR_core_TG_LDL_HDL.csv` | primary | `1_mr/revision_20261030_mvmr_joint_set.R` | Table 2 MVMR block |
 | `MVMR_joint_set_diagnostics.csv` | primary | `1_mr/revision_20261030_mvmr_joint_set.R` |  |
+| `NHANES_temporal_validation.csv` | primary | `4_external/revision_20261030_temporal_primary.R` |  |
 | `cis_drug_target_MR_PPARG.csv` | primary | `2_cis_mr\phase18_pparg_cis_mr.R` |  |
 | `cis_instrument_strength_PPARG.csv` | primary | `2_cis_mr\phase18_pparg_cis_mr.R` |  |
 | `cis_pparg_correlated_ivw.csv` | primary | `2_cis_mr\phase18_pparg_cis_mr.R` |  |

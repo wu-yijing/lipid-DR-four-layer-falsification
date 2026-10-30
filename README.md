@@ -123,6 +123,15 @@ institutional score. The increment over the locally fitted lipid-only model is *
 which only **0.029** is attributable to cross-population transport; the two components are
 exhaustive (0.218 + 0.029 = 0.247).
 
+> **The manuscript reports layers 3 and 4 under a different outcome convention.** In the
+> revised analysis, participants whose photographs could not be graded are treated as having a
+> missing outcome, which gives a reference-model AUC of 0.786 (0.804 weighted), a locally fitted
+> lipid score of 0.540 (0.498-0.580) and a transported score of 0.467 (0.424-0.512), with temporal
+> validation at 0.784 / 0.775. The numbers in this section are the submitted-frame values, retained
+> because the committed tables below were produced under that frame; `NHANES_outcome_conventions.csv`
+> and `NHANES_temporal_validation.csv` carry both, side by side.
+
+
 > **One committed row is defective, and it has been corrected here.** The
 > `local_lipid_only_std` row of `layer4_three_row_AUC.csv` reports n = 888 and AUC 0.4861 for
 > the locally fitted lipid-only model using the extended variable set (+TG, +LDL-C). Both are

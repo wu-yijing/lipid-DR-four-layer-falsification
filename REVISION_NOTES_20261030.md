@@ -14,6 +14,7 @@ code and aggregate tables are.
 | Q_A | not reported | 188.8 on 130 df, p = 5.8e-4 |
 | Layer-4 reference model | 0.733, n = 888 | 0.786 (0.804 weighted), n = 756 |
 | Layer-3 transported score | 0.486, n = 888 | 0.467 (0.424-0.512), n = 756 |
+| Temporal validation (full model) | 0.748 / 0.722 | 0.784 / 0.775 |
 
 The layer-3/4 change follows from treating ungradable fundus photographs as a missing
 outcome rather than as non-cases (variant C of `NHANES_outcome_conventions.csv`). The
@@ -30,6 +31,7 @@ MVMR change follows from refitting the mutually adjusted model on one instrument
 | `1_mr/revision_20261030_mvmr_validate.R` | reproduces the published univariable IVW on the overlapping subset, as an allele-alignment check |
 | `4_external/revision_20261030_nhanes_design.R` | surveys design (strata, PSUs, four-year and fasting weights), design-consistent intervals, the three outcome conventions |
 | `4_external/revision_20261030_figure4_redraw.R` | regenerates Figure 4 from the frozen predictions |
+| `4_external/revision_20261030_temporal_primary.R` | temporal validation under the primary definition, with the transported score added |
 
 ## Added aggregate tables
 

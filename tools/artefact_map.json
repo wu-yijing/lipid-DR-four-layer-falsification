@@ -733,5 +733,12 @@
     "sources": [
       "<SRC>\\phase4_out_v2d\\phase20_outcome_ungradable_bounds.csv"
     ]
+  },
+  "NHANES_temporal_validation.csv": {
+    "committed": "NHANES_temporal_validation.csv",
+    "provenance": "direct",
+    "written_by": [
+      "4_external/revision_20261030_temporal_primary.R"
+    ]
   }
 }

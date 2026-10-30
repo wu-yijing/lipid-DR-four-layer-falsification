@@ -1,0 +1,5 @@
+frame,outcome_convention,train_cycle,test_cycle,n_test,events,full_model_auc,locally_fitted_lipid_auc,transported_core_auc
+A_submitted,ungradable photographs counted as non-cases (submitted convention),2005-2006,2007-2008,672,180,0.7535,0.5504,0.4997
+A_submitted,ungradable photographs counted as non-cases (submitted convention),2007-2008,2005-2006,447,139,0.7250,0.5307,0.4893
+B_primary,ungradable photographs treated as missing (primary analysis),2005-2006,2007-2008,535,180,0.7842,0.5420,0.4732
+B_primary,ungradable photographs treated as missing (primary analysis),2007-2008,2005-2006,349,139,0.7750,0.5418,0.4713
