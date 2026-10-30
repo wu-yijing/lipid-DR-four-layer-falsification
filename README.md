@@ -109,27 +109,28 @@ artefact of the outcome variable. **This is the study's first transferable findi
 
 ### Transportability (layer 3)
 
-Institutional coefficients applied to the NHANES 2005-2008 diabetes subgroup give AUC 0.498 /
-0.493 (LASSO version 0.551), MEC-weighted 0.479 / 0.458, with 95% CIs including 0.5. The MEC-
-weighted calibration slopes are negative (-0.91 and -1.81), so the transferred linear predictor
+Institutional coefficients applied to the NHANES 2005-2008 diabetes subgroup give AUC 0.475 /
+0.478 (LASSO version 0.554), MEC-weighted 0.457 / 0.446, with 95% CIs including 0.5. The MEC-
+weighted calibration slopes are negative (-1.92 and -2.44), so the transferred linear predictor
 reverses direction in the target population rather than merely drifting in scale. An MI-pooled
-export gives the same picture (0.517 / 0.518).
+export gives the same picture (0.517 / 0.518; submitted frame).
 
 ### Benchmark (layer 4)
 
-Full NHANES reference model AUC 0.733 (weighted 0.749; temporal validation 0.748 / 0.722),
-against 0.515 for a lipid-only model fitted locally in NHANES and 0.4860 for the transported
-institutional score. The increment over the locally fitted lipid-only model is **0.218**, of
-which only **0.029** is attributable to cross-population transport; the two components are
-exhaustive (0.218 + 0.029 = 0.247).
+Full NHANES reference model AUC 0.786 (weighted 0.804; temporal validation 0.784 / 0.775),
+against 0.540 for a lipid-only model fitted locally in NHANES (0.5377 with the extended
+variable set, on 357 participants) and 0.4674 for the transported institutional score. The increment over the locally fitted lipid-only model is **0.246**, of
+which **0.072** is attributable to cross-population transport; the two components are
+exhaustive (0.246 + 0.072 = 0.318).
 
-> **The manuscript reports layers 3 and 4 under a different outcome convention.** In the
-> revised analysis, participants whose photographs could not be graded are treated as having a
-> missing outcome, which gives a reference-model AUC of 0.786 (0.804 weighted), a locally fitted
-> lipid score of 0.540 (0.498-0.580) and a transported score of 0.467 (0.424-0.512), with temporal
-> validation at 0.784 / 0.775. The numbers in this section are the submitted-frame values, retained
-> because the committed tables below were produced under that frame; `NHANES_outcome_conventions.csv`
-> and `NHANES_temporal_validation.csv` carry both, side by side.
+> **These are the primary-analysis values.** Participants whose photographs could not be
+> graded are treated as having a missing outcome, so every layer-3 and layer-4 estimate rests on
+> the participants with ascertainable retinal status (`NHANES_outcome_conventions.csv`, row
+> "treated as missing"; temporal validation in `NHANES_temporal_validation.csv`). The earlier
+> convention, which counted ungradable photographs as non-cases, gave 0.498 / 0.493 for layer 3
+> and 0.733 / 0.515 / 0.486 for layer 4; those values are retained only in the archived tables
+> `layer3_external_validation_AUC.csv` and `layer4_three_row_AUC.csv`, which the audit still checks
+> as provenance.
 
 
 > **One committed row is defective, and it has been corrected here.** The

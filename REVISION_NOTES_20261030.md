@@ -20,6 +20,13 @@ The layer-3/4 change follows from treating ungradable fundus photographs as a mi
 outcome rather than as non-cases (variant C of `NHANES_outcome_conventions.csv`). The
 MVMR change follows from refitting the mutually adjusted model on one instrument set.
 
+## README now describes the primary frame
+
+The layer-3 and layer-4 sections of `README.md` report the primary-analysis values
+(0.475 / 0.478; 0.786 / 0.540 / 0.4674; increments 0.246 / 0.072 / 0.318; temporal 0.784 / 0.775).
+The submitted-frame values are still computed by the archived tables and still checked by the
+audit's arithmetic block, but the README no longer quotes them as the headline.
+
 ## Added code
 
 | File | Role |

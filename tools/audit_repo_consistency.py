@@ -61,6 +61,9 @@ MS = {
     "cc_n": 1417, "cc_events": 367, "prevalence": 0.2405,
     "auc_cc_corrected": 0.579, "auc_mi_corrected": 0.582,
     "auc_cc_apparent": 0.598,
+    # layer-3 and layer-4 entries below describe the archived submitted-frame tables
+    # (ungradable photographs counted as non-cases). The primary-frame values the
+    # manuscript now reports are asserted in D5 / D5b against NHANES_outcome_conventions.csv.
     "l3_core_uw": 0.498, "l3_core_w": 0.479,
     "l3_std_uw": 0.493, "l3_std_w": 0.458,
     "l3_slope_w_core": -0.91, "l3_slope_w_std": -1.81,
@@ -553,8 +556,8 @@ REQUIRED = [
     (r"474", "record-level outcome: 474 DR cases"),
     (r"\b275\b", "record-level outcome: 275 records analysed as cases"),
     (r"\b475\b", "record-level outcome: 475 records carrying the miscoded value"),
-    (r"0\.4860", "transported score quoted to 4 dp"),
-    (r"0\.4861", "locally fitted extended lipid-only model quoted to 4 dp"),
+    (r"0\.4674", "transported score quoted to 4 dp"),
+    (r"0\.5377", "locally fitted extended lipid-only model quoted to 4 dp"),
     (r"opposite directions", "instrument dependence stated as two opposite directions"),
     (r"external validation", "NHANES role declared as external validation"),
     (r"institutional", "institutional data declared (publisher policy condition)"),
@@ -599,14 +602,22 @@ def audit_readme():
     # headline numbers in the README must be the primary-analysis values
     for val, why in (("0.579", "complete-case optimism-corrected AUC"),
                      ("0.582", "multiply-imputed optimism-corrected AUC"),
-                     ("0.498", "layer-3 core AUC (primary)"),
-                     ("0.493", "layer-3 std AUC (primary)"),
-                     ("0.733", "full reference model AUC"),
-                     ("0.515", "locally fitted lipid-only AUC"),
-                     ("0.218", "full vs locally fitted increment"),
-                     ("0.029", "transport component of the increment")):
+                     ("0.475", "layer-3 core AUC (primary frame)"),
+                     ("0.478", "layer-3 std AUC (primary frame)"),
+                     ("0.786", "full reference model AUC (primary frame)"),
+                     ("0.540", "locally fitted lipid-only AUC (primary frame)"),
+                     ("0.246", "full vs locally fitted increment (primary frame)"),
+                     ("0.072", "transport component of the increment (primary frame)")):
         check(S, "D5", "README quotes the primary value for %s" % why, val,
               "present" if val in txt else "MISSING", val in txt)
+
+    conv = {r["convention"]: r for r in rows("NHANES_outcome_conventions.csv")}
+    prim = [r for k, r in conv.items() if k.startswith("ungradable photographs treated as missing")][0]
+    for field, want, label in (("full_model_auc", "0.7856", "full reference model"),
+                               ("local_lipid_auc", "0.5397", "locally fitted lipid-only"),
+                               ("transported_score_auc", "0.4674", "transported score")):
+        check(S, "D5b", "primary-frame table agrees with the README on the %s" % label,
+              want, "%.4f" % float(prim[field]), abs(float(prim[field]) - float(want)) < 5e-4)
 
     # every file in output_tables/ must be classified in the artefact map, and
     # PROVENANCE.md must exist and must keep flagging the superseded artefacts
