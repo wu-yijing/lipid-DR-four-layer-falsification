@@ -495,8 +495,8 @@ def audit_mr_tables():
 
     mvmr = {r["id.exposure"]: r for r in rows("MVMR_core_TG_LDL_HDL.csv")}
     check(S, "C-mvmr-tg", "TG attenuates to the null after mutual adjustment in MVMR",
-          "0.94, p>0.05", "%.2f, p=%.3f" % (float(mvmr["ieu-a-302"]["or"]), float(mvmr["ieu-a-302"]["pval"])),
-          near(float(mvmr["ieu-a-302"]["or"]), 0.94, 0.01) and float(mvmr["ieu-a-302"]["pval"]) > 0.05)
+          "0.93, p>0.05", "%.2f, p=%.3f" % (float(mvmr["ieu-a-302"]["or"]), float(mvmr["ieu-a-302"]["pval"])),
+          near(float(mvmr["ieu-a-302"]["or"]), 0.93, 0.01) and float(mvmr["ieu-a-302"]["pval"]) > 0.05)
 
     tw = [r for r in rows("MR_two_sample_all_methods.csv") if r["exposure"] == "TG"]
     ivw = [r for r in tw if r["method"] == "Inverse variance weighted"][0]

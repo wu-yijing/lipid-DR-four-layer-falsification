@@ -76,8 +76,8 @@ independent implementation agrees completely (`layer2_independent_reextraction_s
 ### Causal (layer 1)
 
 Univariable TG OR 0.86 (p = 0.009) does not survive Bonferroni correction (0.05/6 = 0.0083),
-attenuates to 0.94 (p = 0.24) after multivariable MR, and is not reproduced by any of six cis
-drug-target analyses. MR-PRESSO outlier correction returns 0.878 (p = 0.0045), so the
+attenuates to 0.93 (0.83-1.03, p = 0.18) after multivariable MR on a common set of 133
+instruments, and is not reproduced by any of six cis drug-target analyses. MR-PRESSO outlier correction returns 0.878 (p = 0.0045), so the
 multiplicity verdict depends on which analysis is treated as primary. Two settings give a
 negative, nominally significant estimate; one gives the null; one gives the opposite sign. The
 LPL cis instruments place the TG estimate on the **opposite** side of the null from the

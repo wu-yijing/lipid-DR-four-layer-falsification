@@ -1,0 +1,4 @@
+convention,diabetes_subgroup_n,diabetes_subgroup_events,reference_n,reference_events,transported_core_auc,transported_core_lo,transported_core_hi,transported_std_auc,transported_score_auc,local_lipid_auc,full_model_auc,full_model_auc_weighted,dAUC_full_minus_local
+ungradable photographs counted as non-cases (submitted convention),1119,319,888,267,0.4979,0.4592,0.5368,0.4928,0.4860,0.5150,0.7331,0.7483,0.2180
+ungradable photographs counted as cases (worst case),1119,554,888,399,0.4522,0.4183,0.4875,0.4667,0.4492,0.5523,0.7550,0.7784,0.2027
+ungradable photographs treated as missing (primary analysis),884,319,756,267,0.4750,0.4335,0.5165,0.4779,0.4674,0.5397,0.7856,0.8039,0.2459

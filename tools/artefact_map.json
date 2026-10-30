@@ -36,9 +36,9 @@
   },
   "MVMR_core_TG_LDL_HDL.csv": {
     "committed": "MVMR_core_TG_LDL_HDL.csv",
-    "provenance": "collected",
-    "sources": [
-      "<SRC>\\phase1_out\\mvmr_core_TG_LDL_HDL.csv"
+    "provenance": "direct",
+    "written_by": [
+      "1_mr/revision_20261030_mvmr_joint_set.R"
     ]
   },
   "cis_drug_target_MR_PPARG.csv": {
@@ -718,6 +718,20 @@
     "provenance": "direct",
     "written_by": [
       "4_external\\phase20_outcome_ungradable_bounds.R"
+    ]
+  },
+  "MVMR_joint_set_diagnostics.csv": {
+    "committed": "MVMR_joint_set_diagnostics.csv",
+    "provenance": "direct",
+    "written_by": [
+      "1_mr/revision_20261030_mvmr_joint_set.R"
+    ]
+  },
+  "NHANES_outcome_conventions.csv": {
+    "committed": "NHANES_outcome_conventions.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\phase4_out_v2d\\phase20_outcome_ungradable_bounds.csv"
     ]
   }
 }

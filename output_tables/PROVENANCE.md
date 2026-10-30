@@ -24,7 +24,7 @@ individual-level data are not covered by either licence.
 
 | class | n | meaning |
 |---|---|---|
-| `direct` | 42 | a committed script writes this exact name into `output_tables/` |
+| `direct` | 44 | a committed script writes this exact name into `output_tables/` |
 | `collected` | 46 | byte-identical to a named output of a named script (rename step made explicit) |
 | `hand-assembled` | 11 | built by hand from script outputs; values re-derived by the audit |
 | `local-only` | 8 | record-level file held locally only; listed in `.gitignore`, never committed |
@@ -81,6 +81,8 @@ screen, so each is stated explicitly.
 | file | variant | producing script / source | supports |
 |---|---|---|---|
 | `MR_exmore_sensitivity.csv` | primary | `1_mr\phase8_exmore_sensitivity.py` | Section 3.1 / Supplementary Table S12 |
+| `MVMR_core_TG_LDL_HDL.csv` | primary | `1_mr/revision_20261030_mvmr_joint_set.R` | Table 2 MVMR block |
+| `MVMR_joint_set_diagnostics.csv` | primary | `1_mr/revision_20261030_mvmr_joint_set.R` |  |
 | `cis_drug_target_MR_PPARG.csv` | primary | `2_cis_mr\phase18_pparg_cis_mr.R` |  |
 | `cis_instrument_strength_PPARG.csv` | primary | `2_cis_mr\phase18_pparg_cis_mr.R` |  |
 | `cis_pparg_correlated_ivw.csv` | primary | `2_cis_mr\phase18_pparg_cis_mr.R` |  |
@@ -131,7 +133,7 @@ screen, so each is stated explicitly.
 | `MR_PRESSO_10k_summary.csv` | primary | `<SRC>\phase1_out\presso10k_summary.csv` | Table 2 MR-PRESSO row |
 | `MR_heterogeneity_CochranQ.csv` | primary | `<SRC>\phase1_out\mr_heterogeneity.csv` | Table 2 note / Supplementary Table S3 |
 | `MR_two_sample_all_methods.csv` | primary | `<SRC>\phase1_out\mr_main.csv` | Table 2 (all methods) |
-| `MVMR_core_TG_LDL_HDL.csv` | primary | `<SRC>\phase1_out\mvmr_core_TG_LDL_HDL.csv` | Table 2 MVMR block |
+| `NHANES_outcome_conventions.csv` | primary | `<SRC>\phase4_out_v2d\phase20_outcome_ungradable_bounds.csv` |  |
 | `cis_drug_target_MR_six_targets.csv` | primary | `<SRC>\phase1_out\druggable_mr_results.csv` | Figure 2B / Supplementary Table S4 |
 | `cis_instrument_strength_by_target.csv` | primary | `<SRC>\phase2_out\phase2f_cis_strength.csv` | Methods 2.3 instrument strength |
 | `cis_marginal_F_TG_LDL_HDL.csv` | primary | `<SRC>\phase2_out\phase2f_marginal_f.csv` | Methods 2.3 conditional/marginal F |
