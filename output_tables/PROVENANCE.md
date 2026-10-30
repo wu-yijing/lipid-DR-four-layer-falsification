@@ -25,7 +25,7 @@ individual-level data are not covered by either licence.
 | class | n | meaning |
 |---|---|---|
 | `direct` | 45 | a committed script writes this exact name into `output_tables/` |
-| `collected` | 46 | byte-identical to a named output of a named script (rename step made explicit) |
+| `collected` | 47 | byte-identical to a named output of a named script (rename step made explicit) |
 | `hand-assembled` | 11 | built by hand from script outputs; values re-derived by the audit |
 | `local-only` | 8 | record-level file held locally only; listed in `.gitignore`, never committed |
 
@@ -174,6 +174,7 @@ screen, so each is stated explicitly.
 | `layer4_increment_NRI_IDI.csv` | legacy (superseded) | `<SRC>\phase4_out_v2\phase4_increment.csv` |  |
 | `layer4_temporal_validation.csv` | primary | `<SRC>\phase4_out\phase4b_temporal.csv`, `<SRC>\phase4_out\v2_phase4b_temporal.csv` | Section 3.4 temporal validation |
 | `layer4_three_row_AUC.csv` | primary | `<SRC>\phase4_out_v2\phase4e_three_row.csv` | Section 3.4 / Figure 4 three-row comparison |
+| `layer4_three_row_AUC_primary.csv` | primary | `<SRC>\..\_recompute\out_B\layer4_three_row_AUC_corrected.csv` |  |
 | `layer4_weighted_calibration.csv` | primary | `<SRC>\phase7_out\v2_phase7h_calib_weighted.csv` | Section 3.4 weighted calibration |
 | `layer4_weighted_full_vs_lipid.csv` | primary | `<SRC>\phase7_out\v2_phase7h_full_vs_lipid_weighted.csv` | Section 3.4 weighted re-check + Brier |
 

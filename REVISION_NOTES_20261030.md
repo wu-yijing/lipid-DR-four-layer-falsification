@@ -24,8 +24,9 @@ MVMR change follows from refitting the mutually adjusted model on one instrument
 
 The layer-3 and layer-4 sections of `README.md` report the primary-analysis values
 (0.475 / 0.478; 0.786 / 0.540 / 0.4674; increments 0.246 / 0.072 / 0.318; temporal 0.784 / 0.775).
-The submitted-frame values are still computed by the archived tables and still checked by the
-audit's arithmetic block, but the README no longer quotes them as the headline.
+The audit's layer-4 decomposition (A36-A44) now runs on `layer4_three_row_AUC_primary.csv`;
+the nearer-identical 0.4860 / 0.4861 pair that A40 guards is read explicitly from the archived
+`layer4_three_row_AUC.csv`, so the historical collision stays documented without being quoted.
 
 ## Added code
 

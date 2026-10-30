@@ -1,0 +1,5 @@
+frame,row,n,events,AUC_unweighted,AUC_MEC_weighted
+primary (ungradable photographs treated as missing),transported_Chinese_lipid,756,267,0.467430,0.450582
+primary (ungradable photographs treated as missing),local_lipid_only_core,756,267,0.539739,0.552926
+primary (ungradable photographs treated as missing),local_lipid_only_std,357,130,0.537716,0.567401
+primary (ungradable photographs treated as missing),full_reference_model,756,267,0.785628,0.803923

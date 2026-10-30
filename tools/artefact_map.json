@@ -740,5 +740,12 @@
     "written_by": [
       "4_external/revision_20261030_temporal_primary.R"
     ]
+  },
+  "layer4_three_row_AUC_primary.csv": {
+    "committed": "layer4_three_row_AUC_primary.csv",
+    "provenance": "collected",
+    "sources": [
+      "<SRC>\\..\\_recompute\\out_B\\layer4_three_row_AUC_corrected.csv"
+    ]
   }
 }

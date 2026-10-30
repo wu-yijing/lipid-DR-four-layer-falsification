@@ -67,14 +67,15 @@ MS = {
     "l3_core_uw": 0.498, "l3_core_w": 0.479,
     "l3_std_uw": 0.493, "l3_std_w": 0.458,
     "l3_slope_w_core": -0.91, "l3_slope_w_std": -1.81,
-    "l4_full_uw": 0.733, "l4_full_w": 0.748,
-    "l4_local_core_uw": 0.515, "l4_local_core_w": 0.527,
-    "l4_local_std_uw": 0.4861,      # extended variable set (+TG, +LDL-C)
-    "l4_transported_uw": 0.4860,    # Chinese coefficients applied to NHANES
-    "l4_transported_w": 0.467,
+    # unweighted entries: primary frame (n = 756), layer4_three_row_AUC_primary.csv
+    "l4_full_uw": 0.7856, "l4_local_core_uw": 0.5397,
+    "l4_local_std_uw": 0.5377,      # extended variable set (+TG, +LDL-C), n = 357
+    "l4_transported_uw": 0.4674,    # Chinese coefficients applied to NHANES
+    # weighted entries: archived submitted frame (n = 888), layer4_weighted_full_vs_lipid.csv
+    "l4_full_w": 0.748, "l4_local_core_w": 0.527, "l4_transported_w": 0.467,
     "l4_brier_full_w": 0.176, "l4_brier_lipid_w": 0.203,
-    "dAUC_full_vs_local": 0.218, "dAUC_local_vs_transported": 0.029,
-    "dAUC_full_vs_transported": 0.247,
+    "dAUC_full_vs_local": 0.246, "dAUC_local_vs_transported": 0.072,
+    "dAUC_full_vs_transported": 0.318,
     "nri_transported": 0.410, "idi_transported": 0.152,
     "mvmr_union": 198, "instrument_pairs": 662,
     "cis_extracted": 25, "cis_retained": 23,
@@ -142,8 +143,9 @@ def kv(fname, key, keycol="metric", valcol="value"):
 
 def three_row():
     """The layer-4 three-row comparison: full reference model, locally fitted
-    lipid-only model, transported Chinese score (all on n = 888)."""
-    return {r["row"]: float(r["AUC_unweighted"]) for r in rows("layer4_three_row_AUC.csv")}
+    lipid-only model, transported Chinese score, on the primary frame
+    (n = 756; ungradable photographs treated as missing)."""
+    return {r["row"]: float(r["AUC_unweighted"]) for r in rows("layer4_three_row_AUC_primary.csv")}
 
 
 # --------------------------------------------------------------------------
@@ -293,12 +295,13 @@ def audit_arithmetic():
     check(S, "A39", "locally fitted lipid-only (extended variable set) AUC",
           MS["l4_local_std_uw"], round(tr["local_lipid_only_std"], 4),
           near(tr["local_lipid_only_std"], MS["l4_local_std_uw"], 5e-5))
-    check(S, "A40", "the two 0.486 values are distinct quantities that must not be conflated",
+    arch = {r["row"]: float(r["AUC_unweighted"]) for r in rows("layer4_three_row_AUC.csv")}
+    check(S, "A40", "in the archived submitted-frame table the two near-identical values are distinct quantities",
           "0.4860 vs 0.4861",
-          "%.4f vs %.4f" % (trans, tr["local_lipid_only_std"]),
-          abs(trans - tr["local_lipid_only_std"]) > 0, fatal=False,
+          "%.4f vs %.4f" % (arch["transported_Chinese_lipid"], arch["local_lipid_only_std"]),
+          abs(arch["transported_Chinese_lipid"] - arch["local_lipid_only_std"]) > 0, fatal=False,
           note="they differ by %.6f; quote 4 decimals with the model named"
-               % abs(trans - tr["local_lipid_only_std"]))
+               % abs(arch["transported_Chinese_lipid"] - arch["local_lipid_only_std"]))
     d1, d2 = full - local, local - trans
     check(S, "A41", "increment: full model minus locally fitted lipid-only",
           MS["dAUC_full_vs_local"], round(d1, 3), near(d1, MS["dAUC_full_vs_local"], TOL["auc"]))
@@ -307,7 +310,7 @@ def audit_arithmetic():
           near(d2, MS["dAUC_local_vs_transported"], TOL["auc"]))
     check(S, "A43", "increment: full model minus transported", MS["dAUC_full_vs_transported"],
           round(full - trans, 3), near(full - trans, MS["dAUC_full_vs_transported"], TOL["auc"]))
-    check(S, "A44", "the two components are exhaustive (0.218 + 0.029 = 0.247)",
+    check(S, "A44", "the two components are exhaustive (0.246 + 0.072 = 0.318)",
           round(MS["dAUC_full_vs_local"] + MS["dAUC_local_vs_transported"], 3),
           round(d1, 3) + round(d2, 3),
           near(d1 + d2, full - trans, 1e-9))
