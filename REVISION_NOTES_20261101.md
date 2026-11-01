@@ -93,3 +93,13 @@ calibration is not reported for this model and why, instead of leaving the gap u
 and intercept by bootstrap; it is **provided unrun**, because it needs the individual-level
 development set, which is not deposited here. No table in `output_tables/` corresponds to
 it, and none is claimed.
+
+### Layer-2 calibration: stated, not quoted
+
+The layer-2 model is fitted and evaluated on the same records, so its apparent calibration
+slope and intercept are 1.00 and 0.00 by construction. Discussion 4.5 now says that
+calibration is not reported for this model and why, instead of leaving the gap unexplained.
+`3_prediction/revision_20261102_layer2_calibration.R` computes the optimism-corrected slope
+and intercept by bootstrap; it is **provided unrun**, because it needs the individual-level
+development set, which is not deposited here. No table in `output_tables/` corresponds to
+it, and none is claimed.
