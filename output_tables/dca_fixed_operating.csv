@@ -1,0 +1,10 @@
+model,scenario,threshold,nb_w,referred,sens,spec,k
+full_reference,top 25% (weighted) referred,0.506,0.0755,0.2511,0.5063,0.8715,210
+full_reference,top 40% (weighted) referred,0.306,0.1583,0.4005,0.716,0.7511,342
+full_reference,referral needed for 90% sensitivity,0.165,0.2272,0.6229,0.9005,0.5105,509
+local_lipid,top 25% (weighted) referred,0.373,0.0043,0.2509,0.2962,0.7709,237
+local_lipid,top 40% (weighted) referred,0.338,0.0085,0.4001,0.4341,0.6162,351
+local_lipid,referral needed for 90% sensitivity,0.24,0.1074,0.8877,0.9073,0.1217,690
+transported,top 25% (weighted) referred,0.27,0.0034,0.253,0.2177,0.73,154
+transported,top 40% (weighted) referred,0.265,0.0175,0.402,0.3679,0.5816,250
+transported,referral needed for 90% sensitivity,0.244,0.0917,0.9205,0.9047,0.0718,669

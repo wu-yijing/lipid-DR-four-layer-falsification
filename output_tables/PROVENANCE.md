@@ -24,7 +24,7 @@ individual-level data are not covered by either licence.
 
 | class | n | meaning |
 |---|---|---|
-| `direct` | 45 | a committed script writes this exact name into `output_tables/` |
+| `direct` | 51 | a committed script writes this exact name into `output_tables/` |
 | `collected` | 47 | byte-identical to a named output of a named script (rename step made explicit) |
 | `hand-assembled` | 11 | built by hand from script outputs; values re-derived by the audit |
 | `local-only` | 8 | record-level file held locally only; listed in `.gitignore`, never committed |
@@ -90,6 +90,9 @@ screen, so each is stated explicitly.
 | `cis_pparg_ld_clump_crosscheck.csv` | primary | `2_cis_mr\phase19_pparg_ld_clump_server.R` |  |
 | `cis_pparg_per_instrument_wald.csv` | primary | `2_cis_mr\phase18_pparg_cis_mr.R` |  |
 | `cis_six_target_ld_clump_crosscheck.csv` | primary | `2_cis_mr\phase19b_six_target_ld_clump_crosscheck.R` |  |
+| `dca_fixed_operating.csv` | primary | `4_external/revision_20261101_decision_analysis.py` |  |
+| `dca_net_benefit_curve.csv` | primary | `4_external/revision_20261101_decision_analysis.py` |  |
+| `dca_operating_points.csv` | primary | `4_external/revision_20261101_decision_analysis.py` |  |
 | `layer1_MDE_by_exposure.csv` | primary | `1_mr\phase12_power_mde.py` |  |
 | `layer1_cis_target_MDE.csv` | primary | `2_cis_mr\phase13_cis_MDE.py` |  |
 | `layer1_cis_target_MDE_PPARG.csv` | primary | `2_cis_mr\phase18_pparg_cis_mr.R` |  |
@@ -106,6 +109,7 @@ screen, so each is stated explicitly.
 | `layer1_winners_curse_threshold_sensitivity.csv` | primary | `1_mr\phase12_power_mde.py` |  |
 | `layer2_design_condition_numbers.csv` | primary | `3_prediction/phase10_reporting_gaps.py` | Section 3.2 - basis of the condition number |
 | `layer2_independent_reextraction_summary.csv` | primary | `3_prediction\phase9_independent_reextraction.py` | Supplementary Table S14a |
+| `layer2_linkage_window.csv` | primary | `3_prediction/phase22_linkage_window.R` |  |
 | `layer2_missingness_patterns.csv` | primary | `3_prediction\phase8_review_revision_analyses.py` | Supplementary Table S10 |
 | `layer2_outcome_audit_and_bounds.csv` | primary | `3_prediction\phase8b_outcome_error_bounds.py` | Supplementary Table S13 |
 | `layer2_outcome_crosstab_full.csv` | primary | `3_prediction\phase8_review_revision_analyses.py` | Methods 2.4 / Supplementary Table S11 |
@@ -125,6 +129,8 @@ screen, so each is stated explicitly.
 | `layer4_local_comparator_increment.csv` | primary | `4_external/phase10_local_comparator_increment.R` | Section 3.4 - attributable increment with intervals |
 | `layer4_three_row_AUC_corrected.csv` | primary | `4_external/phase10_local_comparator_increment.R` | Section 3.4 - corrected three-row comparison |
 | `phase20_outcome_ungradable_bounds.csv` | primary | `4_external\phase20_outcome_ungradable_bounds.R` |  |
+| `tableS1_primary_frame.csv` | primary | `4_external/revision_20261031_tableS1_primary_frame.R` |  |
+| `tableS42_primary_frame.csv` | primary | `4_external/revision_20261031_tableS42_primary_frame.R` |  |
 
 ## Collected and renamed from a script output
 

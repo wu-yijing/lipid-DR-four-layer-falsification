@@ -1,0 +1,11 @@
+"frame","model","n","events","auc"
+"original (1,119)","Wu 6 of 8 (HDL in mmol/L, corrected)",910,268,0.707
+"original (1,119)","Wu 6 of 8 (HDL in mg/dL, as printed in S42)",910,268,0.531
+"original (1,119)","Wu 4 variables (age, duration, SBP, HbA1c)",927,272,0.719
+"original (1,119)","Guo 6 of 7",462,146,0.708
+"original (1,119)","Guo 6 of 7, TG component set to 0",462,146,0.731
+"primary (884)","Wu 6 of 8 (HDL in mmol/L, corrected)",763,268,0.757
+"primary (884)","Wu 6 of 8 (HDL in mg/dL, as printed in S42)",763,268,0.545
+"primary (884)","Wu 4 variables (age, duration, SBP, HbA1c)",775,272,0.772
+"primary (884)","Guo 6 of 7",390,146,0.746
+"primary (884)","Guo 6 of 7, TG component set to 0",390,146,0.773

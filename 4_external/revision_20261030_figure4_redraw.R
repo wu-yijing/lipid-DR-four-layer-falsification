@@ -71,6 +71,14 @@ R1 <- roc_step(p_full[ok], y); R2 <- roc_step(p_loc[ok], y); R3 <- roc_step(p_tr
 cat(sprintf("full %.4f | local %.4f | transported %.4f\n", rk(p_full[ok],y), rk(p_loc[ok],y), rk(p_tr[ok],y)))
 cat(sprintf("max fpr overlap check: npred=%d, points full/local/trans = %d/%d/%d\n", sum(ok), nrow(R1), nrow(R2), nrow(R3)))
 
+## Predictions are written outside the repository (individual-level; .gitignore and the
+## aggregate-only policy in POLICY_COMPLIANCE.md both forbid committing them). The
+## decision analysis in revision_20261101_decision_analysis.py reads this file via LDF_OOF.
+write.csv(data.frame(row = seq_along(ok), any_dr = y, wt4 = dref$wt4[ok], fold = fold[ok],
+                     p_full = p_full[ok], p_loc = p_loc[ok], p_tr = p_tr[ok]),
+          file.path(OUT, "nhanes_oof_predictions.csv"), row.names = FALSE)
+cat("WROTE predictions:", sum(ok), "rows\n")
+
 png(file.path(OUT, "Fig4_check_corrected.png"), width = 1100, height = 1050, res = 160)
 par(mar = c(4.6, 4.8, 1.2, 1.2), mgp = c(2.9, 0.75, 0), cex.axis = 1.05, cex.lab = 1.15)
 plot(NA, xlim = c(0,1), ylim = c(0,1), xlab = "1 \u2212 specificity", ylab = "Sensitivity", axes = FALSE)

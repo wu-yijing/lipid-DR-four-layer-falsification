@@ -747,5 +747,47 @@
     "sources": [
       "<SRC>\\..\\_recompute\\out_B\\layer4_three_row_AUC_corrected.csv"
     ]
+  },
+  "dca_net_benefit_curve.csv": {
+    "committed": "dca_net_benefit_curve.csv",
+    "provenance": "direct",
+    "written_by": [
+      "4_external/revision_20261101_decision_analysis.py"
+    ]
+  },
+  "dca_operating_points.csv": {
+    "committed": "dca_operating_points.csv",
+    "provenance": "direct",
+    "written_by": [
+      "4_external/revision_20261101_decision_analysis.py"
+    ]
+  },
+  "dca_fixed_operating.csv": {
+    "committed": "dca_fixed_operating.csv",
+    "provenance": "direct",
+    "written_by": [
+      "4_external/revision_20261101_decision_analysis.py"
+    ]
+  },
+  "layer2_linkage_window.csv": {
+    "committed": "layer2_linkage_window.csv",
+    "provenance": "direct",
+    "written_by": [
+      "3_prediction/phase22_linkage_window.R"
+    ]
+  },
+  "tableS1_primary_frame.csv": {
+    "committed": "tableS1_primary_frame.csv",
+    "provenance": "direct",
+    "written_by": [
+      "4_external/revision_20261031_tableS1_primary_frame.R"
+    ]
+  },
+  "tableS42_primary_frame.csv": {
+    "committed": "tableS42_primary_frame.csv",
+    "provenance": "direct",
+    "written_by": [
+      "4_external/revision_20261031_tableS42_primary_frame.R"
+    ]
   }
 }
