@@ -196,6 +196,7 @@ calibration in new data.
 figures/         figure and supplementary-assembly scripts
 output_tables/   de-identified AGGREGATE results (+ PROVENANCE.md)
 tools/           path resolution, artefact provenance, consistency self-audit
+docs/            audit record of the revision package (`docs/audit_20261101.md`)
 ```
 
 ## Reproducibility
