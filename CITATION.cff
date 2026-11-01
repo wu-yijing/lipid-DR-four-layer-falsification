@@ -30,6 +30,9 @@ date-released: "2026-11-01"
 doi: 10.5281/zenodo.23331501
 identifiers:
   - type: doi
+    value: 10.5281/zenodo.23857272
+    description: "Version 1.1.0 (this release)"
+  - type: doi
     value: 10.5281/zenodo.23331502
     description: "Version 1.0.0 (superseded)"
 repository-code: "https://github.com/wu-yijing/lipid-DR-four-layer-falsification"

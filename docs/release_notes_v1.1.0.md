@@ -66,4 +66,4 @@ committed.
 ## Citation
 
 Concept DOI (all versions, always latest): **10.5281/zenodo.23331501**.
-Version DOI for this release: listed on the Zenodo record.
+Version DOI for this release: **[10.5281/zenodo.23857272](https://doi.org/10.5281/zenodo.23857272)**.
