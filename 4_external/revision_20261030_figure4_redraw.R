@@ -3,16 +3,30 @@
 # Inputs are the extracts written by tools/revision_20261030_extract_union.sh; the
 # GLGC 2013 summary statistics are fetched by tools/revision_20261030_download_glgc.py.
 ## Redraw Figure 4 from CURRENT predictions; tie-collapsed step ROC; unweighted (matches reported AUCs)
+##
+## FRAME. Figure 4 is drawn on the PRIMARY frame of Methods 2.2 (R1-#3): ungradable
+## photographs carry a missing outcome rather than a non-case label, which fixes the
+## analysis set at n = 756 / 267 events. Until 2026-11-01 this script omitted that step and
+## reproduced the submitted frame (n = 888: full 0.7331, local 0.5150, transported 0.4860),
+## so it did not regenerate the published figure. The one-line assignment below is the
+## whole difference; with it the three AUCs are 0.7856 / 0.5397 / 0.4674, matching
+## output_tables/layer4_three_row_AUC_primary.csv and manuscript Section 3.4.
+##
+## Paths: LDF_SRC overrides the frozen input directory; LDF_FIG4_OUT overrides the output
+## directory (default: a session temp directory, so a run leaves the working tree clean).
 suppressMessages({ library(survey) })
 set.seed(20260912)
-DEV <- "E:/workbuddy/2026-09-04-18-19-16/phase2_dev/dev_set_v2.csv"
-NH  <- "E:/workbuddy/2026-09-04-18-19-16/phase2_ext/NHANES_B.csv"
-OUT <- "E:/workbuddy/Front  in  Endocrinology  投稿/投稿资料/审稿回应_InteractiveReview_20261029"
+SRC <- Sys.getenv("LDF_SRC", "E:/workbuddy/2026-09-04-18-19-16")
+DEV <- file.path(SRC, "phase2_dev/dev_set_v2.csv")
+NH  <- file.path(SRC, "phase2_ext/NHANES_B.csv")
+OUT <- Sys.getenv("LDF_FIG4_OUT", file.path(tempdir(), "fig4"))
+dir.create(OUT, showWarnings = FALSE, recursive = TRUE)
 
 nh <- read.csv(NH)
 nh$tc_mmol <- nh$tc/38.67; nh$hdl_mmol <- nh$hdl/38.67; nh$tg_mmol <- nh$tg/88.57
 nh$ldl_mmol <- nh$ldl/38.67; nh$tg_log <- log2(nh$tg_mmol); nh$age10 <- nh$age/10
 dm <- nh[nh$diabetes == 1, ]
+dm$any_dr[is.na(dm$dr_level4)] <- NA          # R1-#3: ungradable = missing outcome (n = 756)
 dev <- read.csv(DEV)
 d <- dev[dev$gradeable == 1 & complete.cases(dev[, c("age","male","tg","tc","hdl_c","ldl_c","apo_a1","apo_b","any_dr")]), ]
 d$tg_log <- log2(d$tg); d$age10 <- d$age/10
