@@ -45,7 +45,7 @@ LAYERS = [
              "Logistic + LASSO, bootstrap 1,000; multiple imputation (m = 50) as primary analysis",
              "Complete cases 0.579 vs multiple imputation 0.582; the earlier 0.06 gap was an outcome-coding artefact",
          ],
-         verdict=("\u2717", RED, "Below the margin with unstable coefficients \u2014 alone sufficient to refute the claim")),
+         verdict=("\u2717", RED, "Below the margin \u2014 alone sufficient to refute the claim")),
     dict(n="Layer 3", name="Transportability", role="constitutive",
          lines=[
              "Chinese coefficients applied to the NHANES 2005\u20132008 diabetes subgroup",
