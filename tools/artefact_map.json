@@ -745,7 +745,7 @@
     "committed": "layer4_three_row_AUC_primary.csv",
     "provenance": "collected",
     "sources": [
-      "<SRC>\\..\\_recompute\\out_B\\layer4_three_row_AUC_corrected.csv"
+      "<SRC>\\..\\_r1_review_20261029\\pipeB\\out_B\\layer4_three_row_AUC_corrected.csv"
     ]
   },
   "dca_net_benefit_curve.csv": {
