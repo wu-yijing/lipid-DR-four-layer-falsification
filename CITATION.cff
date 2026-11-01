@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this code or the aggregate results, please cite the archived version."
-title: "Lipids do not support stand-alone, transportable risk stratification for diabetic retinopathy: a four-layer evaluation, with a cautionary finding on outcome misclassification"
+title: "Routine lipids do not support stand-alone, transportable risk stratification for diabetic retinopathy: a four-layer evaluation, with a cautionary finding on outcome misclassification"
 abstract: "Analysis code, figure/table-generation scripts and de-identified aggregate outputs supporting a four-layer evaluation of whether lipids can support a stand-alone, transportable diabetic-retinopathy risk tool. The repository contains no manuscript text and no individual-level data."
 type: software
 license: MIT
@@ -25,13 +25,13 @@ authors:
     given-names: Guoxi
     orcid: "https://orcid.org/0000-0002-2364-0364"
     affiliation: "The First Affiliated Hospital of Bengbu Medical University"
-version: 1.0.0
-date-released: "2026-10-12"
-doi: 10.5281/zenodo.23331502
+version: 1.1.0
+date-released: "2026-11-01"
+doi: 10.5281/zenodo.23331501
 identifiers:
   - type: doi
-    value: 10.5281/zenodo.23331501
-    description: "Concept DOI (all versions of this archive)"
+    value: 10.5281/zenodo.23331502
+    description: "Version 1.0.0 (superseded)"
 repository-code: "https://github.com/wu-yijing/lipid-DR-four-layer-falsification"
 keywords:
   - diabetic retinopathy
