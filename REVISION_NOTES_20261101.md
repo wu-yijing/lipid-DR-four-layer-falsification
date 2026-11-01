@@ -40,3 +40,46 @@ The opening of 4.1 now leads with the decision-level result (net benefit at or b
 at a 25% burden against 51%) and presents the 0.70 margin afterwards as the formal
 criterion for that same decision, so that the argument no longer depends on the margin.
 The decision numbers it quotes are those of Supplementary Table S48 and Section 3.4.
+
+---
+
+## Third pass (v6.4): three P1 and five P2 items found by a version-to-version audit
+
+Comparing the submitted manuscript with the v6.3 revision line by line turned up eight
+defects that the earlier passes had introduced or left half-closed. None changes a point
+estimate, a confidence interval or a conclusion; all are consistency, attribution or
+exposition. Three would have been visible to a reviewer who checked the specific place the
+corresponding comment pointed at, which is why they were treated as blocking.
+
+| # | where | what was wrong | fix |
+|---|---|---|---|
+| 27 | response letter, header | carried a date one day before the changes it described | dated to the submission date |
+| 28 | response letter, point 12 | quoted 0.467 as the remnant-cholesterol AUC | 0.436, the value in Results 3.5; 0.467 is the transported score's AUC |
+| 29 | Discussion 4.5, endpoint scope | the minimum detectable odds ratio was given per 1% HbA1c while the observed upper limit beside it was given per SD | both now per SD, with the per-1% equivalents in parentheses; this is the scale the power calculation of Methods 2.3 uses |
+| 30 | Conclusions; Results 3.2 heading; Figure 1 | coefficient *interpretability* was still written as a failure condition, after Table 1 and Supplementary Table S47 had removed stability from the criterion | "unstable", reported but explicitly not a criterion; Figure 1 regenerated from `figures/figure1_roles.py` |
+| 31 | Discussion 4.2, closing | the word cut had deleted the sentence that resolved the inventory of discordant reports, leaving the paragraph without a conclusion | one sentence restored: opposite directions for the same exposure under different instrument sets read as instrument dependence, and null results being under-reported means the record over-represents whichever set was significant |
+| 32 | Table 5 header | column labelled `p (BH-adjusted)` while the text reports q | relabelled `q (BH-adjusted)` |
+| 33 | Discussion 4.1, first paragraph | Supplementary Table S41, a layer-2 robustness table, was cited for the export clause | S41 attached to the source-cohort clause, `Table 4` cited for the export clause |
+| 34 | Methods 2.9 | the script producing the three design-based AUC intervals was missing from the list of revision-time scripts | `4_external/revision_20261101_psu_auc_bootstrap.R` added |
+| 35 | Discussion 4.1 | stray space before a full stop | removed |
+
+Word budget: the fixes add 54 words, funded by six compressions that remove no estimate,
+conclusion or citation — the height rationale in Results 3.1.3 (already stated in
+Discussion 4.5), the ApoA1/ApoB and automated-module sentences in 4.5, the
+alternative-modalities sentence in 4.4, the freeze sentence in 2.9, and the opening of 4.5.
+The declared main-text count moves from 11,979 to 11,978 words.
+
+The three marked copies (clean, tracked, redline) were edited together. Accepting every
+revision in the tracked file and removing every struck run from the redline both reproduce
+the clean text paragraph for paragraph (510 non-empty paragraphs), which is the same
+invariant the earlier passes were checked against.
+
+### What this repository does and does not contain
+
+The manuscript, the response letter, the reviewer correspondence and the packaging manifest
+stay out of this repository: `*.docx` and the manuscript-assembly scripts are excluded by
+`.gitignore`, and the data-protection rules there also keep individual-level records and
+reader packs out of `output_tables/` (see `POLICY_COMPLIANCE.md`). What is here is the
+analysis code, the de-identified aggregate tables, and these notes, which describe each
+change without reproducing manuscript prose. If a claim in the notes and a table in
+`output_tables/` disagree, the table is the authority.
