@@ -25,13 +25,13 @@ authors:
     given-names: Guoxi
     orcid: "https://orcid.org/0000-0002-2364-0364"
     affiliation: "The First Affiliated Hospital of Bengbu Medical University"
-version: 1.1.0
-date-released: "2026-11-01"
+version: 1.2.0
+date-released: "2026-11-02"
 doi: 10.5281/zenodo.23331501
 identifiers:
   - type: doi
     value: 10.5281/zenodo.23857272
-    description: "Version 1.1.0 (this release)"
+    description: "Version 1.1.0 (superseded)"
   - type: doi
     value: 10.5281/zenodo.23331502
     description: "Version 1.0.0 (superseded)"
