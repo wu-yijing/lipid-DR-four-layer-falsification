@@ -50,7 +50,8 @@ __pycache__/
 !output_tables/*.csv
 
 # ===== exception: the joint-set table IS shipped (2026-11-02) =====
-# 1_mr/union_joint_set.csv 是 133 个变异 x 8 列，全部为 GLGC 2013 与 FinnGen R13
+# 1_mr/union_joint_set.csv 是 133 个变异 x 10 列（rsid、三个暴露的 beta/SE、
+# 结局 beta/SE、回文标记），全部为 GLGC 2013 与 FinnGen R13
 # 的公开汇总统计（rsid / beta / SE），不含个体层记录、院内记录号或任何标识符。
 # 入库理由：让 1_mr/revision_20261102_mvmr_covariance.R 在干净克隆中可直接重跑；
 # 否则读者须先重新下载 GLGC 全量汇总数据，复现门槛过高。

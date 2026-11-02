@@ -76,7 +76,7 @@ error identical.
 | `output_tables/mvmr_covariance_adjusted.csv` | conditional estimates and standard errors under both specifications |
 | `output_tables/mvmr_covariance_sensitivity.csv` | the sensitivity grid, conditional F and standard errors per cell |
 
-The joint-set table itself (`1_mr/union_joint_set.csv`, 133 variants × 8 columns of public
+The joint-set table itself (`1_mr/union_joint_set.csv`, 133 variants × 10 columns of public
 GLGC 2013 and FinnGen R13 summary statistics) is shipped, through an explicit `!`
 exception in `.gitignore`, so that the script runs from a clean clone without
 re-downloading the source GWAS. `*.csv` remains excluded everywhere else; the table
