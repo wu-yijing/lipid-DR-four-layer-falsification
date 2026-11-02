@@ -78,5 +78,9 @@ individual-level clinical records are included.
 ## Citation
 
 Concept DOI (all versions, always latest): **10.5281/zenodo.23331501**.
-Version DOI for this release: assigned on publication, and recorded in `CITATION.cff` in the
-commit that follows the deposit.
+Version DOI for this release: **10.5281/zenodo.23877907**
+([doi.org/10.5281/zenodo.23877907](https://doi.org/10.5281/zenodo.23877907)).
+
+The archived snapshot was cut before this DOI existed, so `CITATION.cff` inside the zip lists the
+v1.1.0 DOI as superseded but cannot carry the v1.2.0 DOI itself; the repository commit that follows
+the deposit adds it. This is inherent to a version DOI that is only reserved at publication.

@@ -320,11 +320,12 @@ If you use this code or the aggregate results, please cite the archived version:
 > Wu Y, Chen M, Wu Q, Zhao J, Jin G. *Analysis code and de-identified aggregate results for
 > "Routine lipids do not support stand-alone, transportable risk stratification for diabetic
 > retinopathy: a four-layer evaluation, with a cautionary finding on outcome misclassification"*.
-> Zenodo; 2026. Version 1.2.0. doi: [10.5281/zenodo.23331501](https://doi.org/10.5281/zenodo.23331501)
+> Zenodo; 2026. Version 1.2.0. doi: [10.5281/zenodo.23877907](https://doi.org/10.5281/zenodo.23877907)
 
 The concept DOI [10.5281/zenodo.23331501](https://doi.org/10.5281/zenodo.23331501) refers to all
 versions and always resolves to the latest one, so it is the one to cite when the distinction
-between versions does not matter. Version 1.1.0 is archived as
+between versions does not matter. Version 1.2.0 is archived as
+[10.5281/zenodo.23877907](https://doi.org/10.5281/zenodo.23877907), version 1.1.0 as
 [10.5281/zenodo.23857272](https://doi.org/10.5281/zenodo.23857272) and version 1.0.0 as
 [10.5281/zenodo.23331502](https://doi.org/10.5281/zenodo.23331502). Machine-readable metadata
 is in `CITATION.cff`.
