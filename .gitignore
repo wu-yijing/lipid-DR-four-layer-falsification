@@ -49,6 +49,14 @@ __pycache__/
 !output_tables/**
 !output_tables/*.csv
 
+# ===== exception: the joint-set table IS shipped (2026-11-02) =====
+# 1_mr/union_joint_set.csv 是 133 个变异 x 8 列，全部为 GLGC 2013 与 FinnGen R13
+# 的公开汇总统计（rsid / beta / SE），不含个体层记录、院内记录号或任何标识符。
+# 入库理由：让 1_mr/revision_20261102_mvmr_covariance.R 在干净克隆中可直接重跑；
+# 否则读者须先重新下载 GLGC 全量汇总数据，复现门槛过高。
+# 按"后写胜"，本条须在上面的 *.csv 之后；不影响下面的个体层黑名单。
+!1_mr/union_joint_set.csv
+
 # ===== 2026-09-29 数据保护补丁：个体层记录，严禁进入公开仓库 =====
 # 下列文件位于 output_tables/，而该目录被上面的 !output_tables/** 显式反忽略；
 # 它们含 12 位院内记录号（pid），其中两份还含年份/性别/年龄/中文报告原文。

@@ -7,11 +7,11 @@
 # it, and MendelianRandomization::mr_mvivw() uses `correl.x` only inside the
 # conditional-F calculation. This script supplies the matrix and re-estimates.
 #
-# Input : a joint-set table with columns rsid, bT/sT, bL/sL, bH/sH, bY/sY
-#         (default 1_mr/union_joint_set.csv). That file is written by
-#         1_mr/revision_20261030_mvmr_joint_set.R from the GLGC and FinnGen
-#         extracts and is NOT shipped in this repository (*.csv is excluded by
-#         .gitignore); regenerate it first if it is absent.
+# Input : 1_mr/union_joint_set.csv (shipped; 133 variants x 8 columns of public
+#         GLGC 2013 and FinnGen R13 summary statistics, no individual-level
+#         records). Written by 1_mr/revision_20261030_mvmr_joint_set.R from the
+#         GLGC and FinnGen extracts; the copy in this repository is kept so that
+#         the script runs from a clean clone without re-downloading the sources.
 # Output: <outdir>/mvmr_exposure_correlation.csv
 #         <outdir>/mvmr_covariance_adjusted.csv
 #         <outdir>/mvmr_covariance_sensitivity.csv
